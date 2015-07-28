@@ -203,6 +203,11 @@ a {
 	color: rgb(255, 255, 255);
 }
 
+.fixed.doom {
+        background-image: url("/images/armageddon_julian_povey.jpg");
+}
+
+
 .fixed.suryathon {
 	background-image: url("/images/suryathon4.jpg");
 }
