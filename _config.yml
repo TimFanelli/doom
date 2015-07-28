@@ -1,0 +1,10 @@
+title: Timothy C. Fanelli
+email: tim@fanel.li
+description: 
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://tim.fanel.li" # the base hostname & protocol for your site
+twitter_username: timfanelli
+github_username:  doctorbatch
+
+# Build settings
+markdown: kramdown

@@ -1,0 +1,114 @@
+Last login: Sun Jul 19 14:46:33 on ttys002
+Timothys-MacBook-Pro-3:~ timfanelli$ cd git/t
+-bash: cd: git/t: No such file or directory
+Timothys-MacBook-Pro-3:~ timfanelli$ cd git/timfanelli-www/
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ ls -l
+total 32
+-rw-r--r--   1 timfanelli  staff   557 Jul 19 14:44 _config.yml
+drwxr-xr-x   5 timfanelli  staff   170 Jul 19 14:44 _includes
+drwxr-xr-x   5 timfanelli  staff   170 Jul 19 14:44 _layouts
+drwxr-xr-x   3 timfanelli  staff   102 Jul 19 14:44 _posts
+drwxr-xr-x   5 timfanelli  staff   170 Jul 19 14:44 _sass
+-rw-r--r--   1 timfanelli  staff   470 Jul 19 14:44 about.md
+drwxr-xr-x   4 timfanelli  staff   136 Jul 19 14:45 css
+-rw-r--r--   1 timfanelli  staff  1291 Jul 19 14:44 feed.xml
+drwxr-xr-x  26 timfanelli  staff   884 Jul 19 14:47 images
+-rw-r--r--   1 timfanelli  staff   152 Jul 19 14:46 index.html
+drwxr-xr-x   3 timfanelli  staff   102 Jul 19 14:47 media
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ ls images/
+2011mbp_highres
+BadImports.png
+BrakeHose.jpg
+CASE740713716_iPhone6+_VibrateIssue_F2LNG0MXG5QJ.mp4
+CIMG0048.jpg
+Car
+Cert_ITSpec_Infra_App_Mgmt.jpg
+Cert_ITSpec_Infra_App_Mgmt_sig.jpg
+abstractanonymous.jpg
+after.jpg
+alignment.jpg
+aprbadge
+apt
+att_research_booboo.jpg
+babyj.png
+badScrew.JPG
+before.jpg
+biomech
+blosxonomy.bmp
+blosxonomy.png
+bottom_left.gif
+bottom_right.gif
+brenda.jpg
+buddies.jpg
+bunbite.jpg
+ca
+calendar_handicon.png
+catastrophic_failure.PNG
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ cd ../doctor
+doctor-batch/    doctorbatch-www/ 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ ls -l
+total 32
+-rw-r--r--   1 timfanelli  staff   557 Jul 19 14:44 _config.yml
+drwxr-xr-x   5 timfanelli  staff   170 Jul 19 14:44 _includes
+drwxr-xr-x   5 timfanelli  staff   170 Jul 19 14:44 _layouts
+drwxr-xr-x   3 timfanelli  staff   102 Jul 19 14:44 _posts
+drwxr-xr-x   5 timfanelli  staff   170 Jul 19 14:44 _sass
+-rw-r--r--   1 timfanelli  staff   470 Jul 19 14:44 about.md
+drwxr-xr-x   4 timfanelli  staff   136 Jul 19 14:45 css
+-rw-r--r--   1 timfanelli  staff  1291 Jul 19 14:44 feed.xml
+drwxr-xr-x  54 timfanelli  staff  1836 Jul 19 14:48 images
+-rw-r--r--   1 timfanelli  staff   152 Jul 19 14:46 index.html
+drwxr-xr-x   3 timfanelli  staff   102 Jul 19 14:47 media
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ cat ../trilliumyogacenter.github.io/_includes/section-head.html 
+<div id="{{include.identification}}" class="fixed {{include.splash}}">
+	<div class="sectiontext">
+		<h1>{{include.title}}</h1>
+		
+		<br />
+		<h3>{{include.subtitle}}</h3>
+		<br> <br>
+	</div>
+	
+	{% include {{include.splash}}-attribution.html %}
+</div>Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ nano _includes/about.html 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ nano css/site.css 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ nano _includes/site-header.html 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ nano _includes/contact.html 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ cat index.html 
+---
+layout: site
+simpleformtoken: 46b241b1bb51d1e85816689abbb6ceee
+---
+
+{% include about.html %}
+{% include contact.html %}
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ nano _includes/contact.html 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ nano _includes/contact.html 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ nano index.html 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ cat _includes/contact.html 
+
+
+<div id="contact" class="fixed driving">
+	<div class="sectiontext">
+		<h1>Contact</h1>
+		
+		<br />
+		<h3>Send me an e-mail!</h3>
+		<br> <br>
+	</div>
+	
+</div>
+
+<div class="scrolling">
+	<div class="container">
+		<div class="contactreset">
+			<form id="frmContact" autocomplete="on"
+				action="https://getsimpleform.com/messages?form_api_token={{page.simpleformtoken}}"
+				method="post">
+				<!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+				<input type='hidden' name='redirect_to'
+					value='{{site.url}}{{page.url}}#contactthankyou' />
+
+				<div class="input-prepend">
+					<label for="name"> <span
+						class="add-on va

@@ -1,0 +1,1709 @@
+Last login: Sun Jul 19 14:46:33 on ttys002
+Timothys-MacBook-Pro-3:~ timfanelli$ cd git/t
+-bash: cd: git/t: No such file or directory
+Timothys-MacBook-Pro-3:~ timfanelli$ cd git/timfanelli-www/
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ ls -l
+total 32
+-rw-r--r--   1 timfanelli  staff   557 Jul 19 14:44 _config.yml
+drwxr-xr-x   5 timfanelli  staff   170 Jul 19 14:44 _includes
+drwxr-xr-x   5 timfanelli  staff   170 Jul 19 14:44 _layouts
+drwxr-xr-x   3 timfanelli  staff   102 Jul 19 14:44 _posts
+drwxr-xr-x   5 timfanelli  staff   170 Jul 19 14:44 _sass
+-rw-r--r--   1 timfanelli  staff   470 Jul 19 14:44 about.md
+drwxr-xr-x   4 timfanelli  staff   136 Jul 19 14:45 css
+-rw-r--r--   1 timfanelli  staff  1291 Jul 19 14:44 feed.xml
+drwxr-xr-x  26 timfanelli  staff   884 Jul 19 14:47 images
+-rw-r--r--   1 timfanelli  staff   152 Jul 19 14:46 index.html
+drwxr-xr-x   3 timfanelli  staff   102 Jul 19 14:47 media
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ ls images/
+2011mbp_highres
+BadImports.png
+BrakeHose.jpg
+CASE740713716_iPhone6+_VibrateIssue_F2LNG0MXG5QJ.mp4
+CIMG0048.jpg
+Car
+Cert_ITSpec_Infra_App_Mgmt.jpg
+Cert_ITSpec_Infra_App_Mgmt_sig.jpg
+abstractanonymous.jpg
+after.jpg
+alignment.jpg
+aprbadge
+apt
+att_research_booboo.jpg
+babyj.png
+badScrew.JPG
+before.jpg
+biomech
+blosxonomy.bmp
+blosxonomy.png
+bottom_left.gif
+bottom_right.gif
+brenda.jpg
+buddies.jpg
+bunbite.jpg
+ca
+calendar_handicon.png
+catastrophic_failure.PNG
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ cd ../doctor
+doctor-batch/    doctorbatch-www/ 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ ls -l
+total 32
+-rw-r--r--   1 timfanelli  staff   557 Jul 19 14:44 _config.yml
+drwxr-xr-x   5 timfanelli  staff   170 Jul 19 14:44 _includes
+drwxr-xr-x   5 timfanelli  staff   170 Jul 19 14:44 _layouts
+drwxr-xr-x   3 timfanelli  staff   102 Jul 19 14:44 _posts
+drwxr-xr-x   5 timfanelli  staff   170 Jul 19 14:44 _sass
+-rw-r--r--   1 timfanelli  staff   470 Jul 19 14:44 about.md
+drwxr-xr-x   4 timfanelli  staff   136 Jul 19 14:45 css
+-rw-r--r--   1 timfanelli  staff  1291 Jul 19 14:44 feed.xml
+drwxr-xr-x  54 timfanelli  staff  1836 Jul 19 14:48 images
+-rw-r--r--   1 timfanelli  staff   152 Jul 19 14:46 index.html
+drwxr-xr-x   3 timfanelli  staff   102 Jul 19 14:47 media
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ cat ../trilliumyogacenter.github.io/_includes/section-head.html 
+<div id="{{include.identification}}" class="fixed {{include.splash}}">
+	<div class="sectiontext">
+		<h1>{{include.title}}</h1>
+		
+		<br />
+		<h3>{{include.subtitle}}</h3>
+		<br> <br>
+	</div>
+	
+	{% include {{include.splash}}-attribution.html %}
+</div>Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ nano _includes/about.html 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ nano css/site.css 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ nano _includes/site-header.html 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ nano _includes/contact.html 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ cat index.html 
+---
+layout: site
+simpleformtoken: 46b241b1bb51d1e85816689abbb6ceee
+---
+
+{% include about.html %}
+{% include contact.html %}
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ nano _includes/contact.html 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ nano _includes/contact.html 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ nano index.html 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ cat _includes/contact.html 
+
+
+<div id="contact" class="fixed driving">
+	<div class="sectiontext">
+		<h1>Contact</h1>
+		
+		<br />
+		<h3>Send me an e-mail!</h3>
+		<br> <br>
+	</div>
+	
+</div>
+
+<div class="scrolling">
+	<div class="container">
+		<div class="contactreset">
+			<form id="frmContact" autocomplete="on"
+				action="https://getsimpleform.com/messages?form_api_token={{page.simpleformtoken}}"
+				method="post">
+				<!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+				<input type='hidden' name='redirect_to'
+					value='{{site.url}}{{page.url}}#contactthankyou' />
+
+				<div class="input-prepend">
+					<label for="name"> <span
+						class="add-on validLabel fontawesome-user" name="name"></span>
+					</label> <input size="30" id="name" type="text" name="name"
+						placeholder="Name" title="Please provide your name." />
+				</div>
+
+				<div class="input-prepend">
+					<label for="email"> <span
+						class="add-on validLabel fontawesome-envelope"></span></label> <input
+						type="text" id="email" name="email" placeholder="Email address"
+						title="Please provide a valid email address." />
+				</div>
+
+				<div class="input-prepend">
+					<label for="phone"><span
+						class="add-on validLabel fontawesome-phone"></span></label> <input
+						type="text" name="phone" id="phone" placeholder="Phone Number"
+						title="Please provide a valid phone number." />
+				</div>
+
+				<div class="input-prepend">
+					<label for="target"> <span
+						class="add-on validLabel fontawesome-heart"></span></label>
+					<div class="dropdown">
+						<button id="dLabel" type="button" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">
+							General Questions or Comments <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="dLabel">
+							<li><a id="generalcontact" href="#frmContact">General
+									Questions and Comments</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a id="jbcontact" href="#frmContact">Jean Benvenuto</a></li>
+							<li><a id="tdlvcontact" href="#frmContact">Terry de la
+									Vega</a></li>
+							<li><a id="smcontact" href="#frmContact">Shannon Miller</a></li>
+							<li role="separator" class="divider"></a></li>
+							<li ><a id="chcontact" href="#frmContact">Cintia Hongay</a></li>
+							<li><a id="gmkcontact" href="#frmContact">Gurumantra Kaur</a></li>
+							<li ><a id="dmcontact" href="#frmContact">Debra Mitchell</a></li>
+							<li ><a id="escontact" href="#frmContact">Erica Sharpe</a></li>
+						</ul>
+					</div>
+					<input type="hidden" id="teacher" name="teacher" value="All" />
+				</div>
+
+				<div class="input-prepend">
+					<label for="message"><span
+						class="add-on validLabel fontawesome-comment"></span></label>
+					<textarea
+						placeholder="Questions, Concerns, and Feedback are very much appreciated."
+						id="message" name="message"
+						title="Please provide questions/comments."></textarea>
+				</div>
+
+				<input id="contactSubmit" type="submit" value="Send" />
+
+			</form>
+
+
+		</div>
+	</div>
+	<div id="contactthankyou" class="overlay">
+		<div class="popup">
+			<div class="profile">
+				<h2>Thank You!</h2>
+				<a class="close" href="#contact">×</a>
+				<div class="content">Thank you! Your message has been
+					received, and we'll be in touch shortly!</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</div>
+
+
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ nano _includes/contact.html 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ nano css/site.css 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ nano _includes/about.html 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ nano _includes/site-header.html 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ nano _includes/about.html 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ git add *
+The following paths are ignored by one of your .gitignore files:
+_site
+Use -f if you really want to add them.
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ git status
+On branch gh-pages
+Your branch is ahead of 'origin/gh-pages' by 1 commit.
+  (use "git push" to publish your local commits)
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   _includes/about.html
+	new file:   _includes/contact.html
+	deleted:    _includes/head.html
+	deleted:    _includes/header.html
+	new file:   _includes/section-head.html
+	new file:   _includes/site-footer.html
+	new file:   _includes/site-head.html
+	new file:   _includes/site-header.html
+	deleted:    _layouts/default.html
+	new file:   _layouts/site.html
+	new file:   bootstrap-3.3.5-dist/css/bootstrap-theme.css
+	new file:   bootstrap-3.3.5-dist/css/bootstrap-theme.css.map
+	new file:   bootstrap-3.3.5-dist/css/bootstrap-theme.min.css
+	new file:   bootstrap-3.3.5-dist/css/bootstrap.css
+	new file:   bootstrap-3.3.5-dist/css/bootstrap.css.map
+	new file:   bootstrap-3.3.5-dist/css/bootstrap.min.css
+	new file:   bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.eot
+	new file:   bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.svg
+	new file:   bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.ttf
+	new file:   bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.woff
+	new file:   bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.woff2
+	new file:   bootstrap-3.3.5-dist/js/bootstrap.js
+	new file:   bootstrap-3.3.5-dist/js/bootstrap.min.js
+	new file:   bootstrap-3.3.5-dist/js/npm.js
+	new file:   css/contact.css
+	modified:   css/site.css
+	new file:   font-awesome-4.3.0/.DS_Store
+	new file:   font-awesome-4.3.0/css/font-awesome.css
+	new file:   font-awesome-4.3.0/css/font-awesome.min.css
+	new file:   font-awesome-4.3.0/fonts/FontAwesome.otf
+	new file:   font-awesome-4.3.0/fonts/fontawesome-webfont.eot
+	new file:   font-awesome-4.3.0/fonts/fontawesome-webfont.svg
+	new file:   font-awesome-4.3.0/fonts/fontawesome-webfont.ttf
+	new file:   font-awesome-4.3.0/fonts/fontawesome-webfont.woff
+	new file:   font-awesome-4.3.0/fonts/fontawesome-webfont.woff2
+	new file:   font-awesome-4.3.0/less/animated.less
+	new file:   font-awesome-4.3.0/less/bordered-pulled.less
+	new file:   font-awesome-4.3.0/less/core.less
+	new file:   font-awesome-4.3.0/less/fixed-width.less
+	new file:   font-awesome-4.3.0/less/font-awesome.less
+	new file:   font-awesome-4.3.0/less/icons.less
+	new file:   font-awesome-4.3.0/less/larger.less
+	new file:   font-awesome-4.3.0/less/list.less
+	new file:   font-awesome-4.3.0/less/mixins.less
+	new file:   font-awesome-4.3.0/less/path.less
+	new file:   font-awesome-4.3.0/less/rotated-flipped.less
+	new file:   font-awesome-4.3.0/less/stacked.less
+	new file:   font-awesome-4.3.0/less/variables.less
+	new file:   font-awesome-4.3.0/scss/_animated.scss
+	new file:   font-awesome-4.3.0/scss/_bordered-pulled.scss
+	new file:   font-awesome-4.3.0/scss/_core.scss
+	new file:   font-awesome-4.3.0/scss/_fixed-width.scss
+	new file:   font-awesome-4.3.0/scss/_icons.scss
+	new file:   font-awesome-4.3.0/scss/_larger.scss
+	new file:   font-awesome-4.3.0/scss/_list.scss
+	new file:   font-awesome-4.3.0/scss/_mixins.scss
+	new file:   font-awesome-4.3.0/scss/_path.scss
+	new file:   font-awesome-4.3.0/scss/_rotated-flipped.scss
+	new file:   font-awesome-4.3.0/scss/_stacked.scss
+	new file:   font-awesome-4.3.0/scss/_variables.scss
+	new file:   font-awesome-4.3.0/scss/font-awesome.scss
+	new file:   images/.DS_Store
+	new file:   images/WhyMenDontBatheKids.jpg
+	new file:   images/driving.jpg
+	new file:   images/pocono-raceway.jpg
+	new file:   images/wiring.jpg
+	new file:   images/x-click-but04.gif
+	new file:   images/yoda_boogie.bmp
+	new file:   images/youeatedcookie.jpg
+	modified:   index.html
+	new file:   media/.DS_Store
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ git commit -m "Initial site template"
+[gh-pages c70762f] Initial site template
+ 71 files changed, 17988 insertions(+), 68 deletions(-)
+ create mode 100644 _includes/about.html
+ create mode 100644 _includes/contact.html
+ delete mode 100644 _includes/head.html
+ delete mode 100644 _includes/header.html
+ create mode 100644 _includes/section-head.html
+ create mode 100644 _includes/site-footer.html
+ create mode 100644 _includes/site-head.html
+ create mode 100644 _includes/site-header.html
+ delete mode 100644 _layouts/default.html
+ create mode 100644 _layouts/site.html
+ create mode 100644 bootstrap-3.3.5-dist/css/bootstrap-theme.css
+ create mode 100644 bootstrap-3.3.5-dist/css/bootstrap-theme.css.map
+ create mode 100644 bootstrap-3.3.5-dist/css/bootstrap-theme.min.css
+ create mode 100644 bootstrap-3.3.5-dist/css/bootstrap.css
+ create mode 100644 bootstrap-3.3.5-dist/css/bootstrap.css.map
+ create mode 100644 bootstrap-3.3.5-dist/css/bootstrap.min.css
+ create mode 100644 bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.eot
+ create mode 100644 bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.svg
+ create mode 100644 bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.ttf
+ create mode 100644 bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.woff
+ create mode 100644 bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.woff2
+ create mode 100644 bootstrap-3.3.5-dist/js/bootstrap.js
+ create mode 100644 bootstrap-3.3.5-dist/js/bootstrap.min.js
+ create mode 100644 bootstrap-3.3.5-dist/js/npm.js
+ create mode 100644 css/contact.css
+ create mode 100644 font-awesome-4.3.0/.DS_Store
+ create mode 100644 font-awesome-4.3.0/css/font-awesome.css
+ create mode 100644 font-awesome-4.3.0/css/font-awesome.min.css
+ create mode 100644 font-awesome-4.3.0/fonts/FontAwesome.otf
+ create mode 100644 font-awesome-4.3.0/fonts/fontawesome-webfont.eot
+ create mode 100644 font-awesome-4.3.0/fonts/fontawesome-webfont.svg
+ create mode 100644 font-awesome-4.3.0/fonts/fontawesome-webfont.ttf
+ create mode 100644 font-awesome-4.3.0/fonts/fontawesome-webfont.woff
+ create mode 100644 font-awesome-4.3.0/fonts/fontawesome-webfont.woff2
+ create mode 100644 font-awesome-4.3.0/less/animated.less
+ create mode 100644 font-awesome-4.3.0/less/bordered-pulled.less
+ create mode 100644 font-awesome-4.3.0/less/core.less
+ create mode 100644 font-awesome-4.3.0/less/fixed-width.less
+ create mode 100644 font-awesome-4.3.0/less/font-awesome.less
+ create mode 100644 font-awesome-4.3.0/less/icons.less
+ create mode 100644 font-awesome-4.3.0/less/larger.less
+ create mode 100644 font-awesome-4.3.0/less/list.less
+ create mode 100644 font-awesome-4.3.0/less/mixins.less
+ create mode 100644 font-awesome-4.3.0/less/path.less
+ create mode 100644 font-awesome-4.3.0/less/rotated-flipped.less
+ create mode 100644 font-awesome-4.3.0/less/stacked.less
+ create mode 100644 font-awesome-4.3.0/less/variables.less
+ create mode 100644 font-awesome-4.3.0/scss/_animated.scss
+ create mode 100644 font-awesome-4.3.0/scss/_bordered-pulled.scss
+ create mode 100644 font-awesome-4.3.0/scss/_core.scss
+ create mode 100644 font-awesome-4.3.0/scss/_fixed-width.scss
+ create mode 100644 font-awesome-4.3.0/scss/_icons.scss
+ create mode 100644 font-awesome-4.3.0/scss/_larger.scss
+ create mode 100644 font-awesome-4.3.0/scss/_list.scss
+ create mode 100644 font-awesome-4.3.0/scss/_mixins.scss
+ create mode 100644 font-awesome-4.3.0/scss/_path.scss
+ create mode 100644 font-awesome-4.3.0/scss/_rotated-flipped.scss
+ create mode 100644 font-awesome-4.3.0/scss/_stacked.scss
+ create mode 100644 font-awesome-4.3.0/scss/_variables.scss
+ create mode 100644 font-awesome-4.3.0/scss/font-awesome.scss
+ create mode 100644 images/.DS_Store
+ create mode 100755 images/WhyMenDontBatheKids.jpg
+ create mode 100644 images/driving.jpg
+ create mode 100644 images/pocono-raceway.jpg
+ create mode 100644 images/wiring.jpg
+ create mode 100755 images/x-click-but04.gif
+ create mode 100755 images/yoda_boogie.bmp
+ create mode 100755 images/youeatedcookie.jpg
+ create mode 100644 media/.DS_Store
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ git push -u origin gh-pages
+Counting objects: 1051, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (1047/1047), done.
+Writing objects: 100% (1051/1051), 738.39 MiB | 747.00 KiB/s, done.
+Total 1051 (delta 103), reused 0 (delta 0)
+remote: warning: File images/wedding.m4v is 72.52 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: error: GH001: Large files detected.
+remote: error: Trace: 1ceefaf36cb2c21214763194ae93b547
+remote: error: See http://git.io/iEPt8g for more information.
+remote: error: File images/server1.jar is 364.41 MB; this exceeds GitHub's file size limit of 100.00 MB
+To git@github.com:TimFanelli/timfanelli-www.git
+ ! [remote rejected] gh-pages -> gh-pages (pre-receive hook declined)
+error: failed to push some refs to 'git@github.com:TimFanelli/timfanelli-www.git'
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ cd images/
+Timothys-MacBook-Pro-3:images timfanelli$ git rm server1.jar 
+rm 'images/server1.jar'
+Timothys-MacBook-Pro-3:images timfanelli$ git commit -m "Removed server1.jar"
+[gh-pages ab5a76f] Removed server1.jar
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 images/server1.jar
+Timothys-MacBook-Pro-3:images timfanelli$ cd ..
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ git push -u origin gh-pages
+Counting objects: 1054, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (1050/1050), done.
+Writing objects:  98% (1043/1054), 707.84 MiB | 749.00 KiB/s     
+
+Writing objects: 100% (1054/1054), 738.39 MiB | 746.00 KiB/s, done.
+Total 1054 (delta 105), reused 0 (delta 0)
+remote: warning: File images/wedding.m4v is 72.52 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: error: GH001: Large files detected.
+remote: error: Trace: 15cfb8504c481272c0fd71a7ab4e75ac
+remote: error: See http://git.io/iEPt8g for more information.
+remote: error: File images/server1.jar is 364.41 MB; this exceeds GitHub's file size limit of 100.00 MB
+To git@github.com:TimFanelli/timfanelli-www.git
+ ! [remote rejected] gh-pages -> gh-pages (pre-receive hook declined)
+error: failed to push some refs to 'git@github.com:TimFanelli/timfanelli-www.git'
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ !j
+jekyll serve
+Configuration file: /Users/timfanelli/git/timfanelli-www/_config.yml
+            Source: /Users/timfanelli/git/timfanelli-www
+       Destination: /Users/timfanelli/git/timfanelli-www/_site
+      Generating... 
+                    done.
+ Auto-regeneration: enabled for '/Users/timfanelli/git/timfanelli-www'
+Configuration file: /Users/timfanelli/git/timfanelli-www/_config.yml
+jekyll 2.5.3 | Error:  Address already in use - bind(2) for 127.0.0.1:4000
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ 
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ git status
+On branch gh-pages
+Your branch is ahead of 'origin/gh-pages' by 6 commits.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ git push -u origin gh_pages
+error: src refspec gh_pages does not match any.
+error: failed to push some refs to 'git@github.com:TimFanelli/timfanelli-www.git'
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ git push -u origin gh-pages
+Counting objects: 1306, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (1299/1299), done.
+Writing objects: 100% (1306/1306), 738.58 MiB | 741.00 KiB/s, done.
+Total 1306 (delta 186), reused 0 (delta 0)
+remote: warning: File images/wedding.m4v is 72.52 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: error: GH001: Large files detected.
+remote: error: Trace: f132a43f13bc540ac847555fc1dff8a7
+remote: error: See http://git.io/iEPt8g for more information.
+remote: error: File images/server1.jar is 364.41 MB; this exceeds GitHub's file size limit of 100.00 MB
+To git@github.com:TimFanelli/timfanelli-www.git
+ ! [remote rejected] gh-pages -> gh-pages (pre-receive hook declined)
+error: failed to push some refs to 'git@github.com:TimFanelli/timfanelli-www.git'
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ cd images/
+Timothys-MacBook-Pro-3:images timfanelli$ ls
+2011mbp_highres						josie_avatar.jpg
+BadImports.png						k04v2x-boostn75.png
+BrakeHose.jpg						k04v3-boostmaf-withouttcs.png
+CASE740713716_iPhone6+_VibrateIssue_F2LNG0MXG5QJ.mp4	k04v3-boostmaf-withtcs.png
+CIMG0048.jpg						k04v3-boostn75.png
+CIMG0057.jpg						k04v3-boostvtiming-big.png
+Car							k04v3-boostvtiming.png
+Cert_ITSpec_Infra_App_Mgmt.jpg				k04v3boost-withtcs.png
+Cert_ITSpec_Infra_App_Mgmt_sig.jpg			k04v3boot-withouttcs.png
+ForSale.jpg						k04v3logs
+Huggycycle						ledtails
+JackAndSally						livingroom
+K04Boost-V2vsV3-Normalized2.png				livingroom.jpg
+KenosiaFairwell						mbp
+Kid-Shirt.jpg						mbpauction
+Master_ITSpec_App_Int_Mware.jpg				me.jpg
+Master_ITSpec_App_Int_Mware_sig.jpg			me_chillin.jpg
+NewTattoo.jpg						me_chillin_thumb.jpg
+OliveTree.jpg						megandstewie.jpg
+OrganizeImports.png					megandstewiesnuggle.jpg
+OrganizeImportsPreferences.png				menu.png
+OrganizedImports.png					menu1.png
+SeaFoam Pics						mouse_with_helmet.jpg
+WhyMenDontBatheKids.jpg					msnsearch.jpg
+abstractanonymous.jpg					my_mojito.jpg
+after.jpg						noBrakes.jpg
+alignment.jpg						no_idea.jpg
+aprbadge						oilreport2.png
+apt							oldRotors.jpg
+att_research_booboo.jpg					pb_blosxom.gif
+babyj.png						pb_blosxonomy.gif
+badScrew.JPG						pb_pyblosxom.gif
+before.jpg						philmccrackin.jpg
+biomech							php_no_param_bad_error_check.png
+blosxonomy.bmp						php_with_parameter.png
+blosxonomy.png						pingpong
+bottom_left.gif						pocono-raceway.jpg
+bottom_right.gif					readiness1.jpg
+brenda.jpg						readiness2.jpg
+buddies.jpg						rememberkids.jpg
+bunbite.jpg						res-rawdata-execution.jar
+ca							retrofit
+calendar_handicon.png					rich.jpg
+catastrophic_failure.PNG				seafoam
+cimg0746.jpg						shavings.jpg
+cimg0759.jpg						shavings_closeup.png
+cimg0760.jpg						smith_corona.jpg
+cimg0761.jpg						stewie.jpg
+cimg0762.jpg						stewie_foot.png
+cimg0763.jpg						stewie_foot_wide.png
+cimg0764.jpg						stewie_recovery.jpg
+confusedCoverage.png					stewiesdead.jpg
+de.icio.us.gif						stock_plug.jpg
+de.icio.us.jpg						stock_plug_medium.jpg
+deadtree.jpg						story_bottom.gif
+del.icio.us.gif						story_top.gif
+detail							stuckRotorSmall.JPG
+diningroom						sunrise.jpg
+diy_kit.jpg						thwarted.jpg
+drcolorchip						timandstewie.jpg
+driving.jpg						timfanelliqrcode.png
+embed.html						top_left.gif
+fire.jpg						top_right.gif
+flangebolt.jpg						twitter-rss-bird.png
+fluffy.jpg						urban-moron.gif
+frontSubFrame.jpg					wedding.m4v
+housepics						wiring.jpg
+iTiE Solutions.png					x-click-but04.gif
+idogrevenge.jpg						yoda_boogie.bmp
+jackEngine.jpg						youeatedcookie.jpg
+jettawagon
+Timothys-MacBook-Pro-3:images timfanelli$ git rm server1.jar
+fatal: pathspec 'server1.jar' did not match any files
+Timothys-MacBook-Pro-3:images timfanelli$ git add server1.jar
+fatal: pathspec 'server1.jar' did not match any files
+Timothys-MacBook-Pro-3:images timfanelli$ cd ..
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ ls
+_attachments		_layouts		_sass			bootstrap-3.3.5-dist	images
+_config.yml		_nav_menu_items		_site			css			index.html
+_includes		_pages			about.md		feed.xml		js
+_incsub_wikis		_posts			assets			font-awesome-4.3.0	media
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ git status
+On branch gh-pages
+Your branch is ahead of 'origin/gh-pages' by 6 commits.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ ls
+_attachments		_layouts		_sass			bootstrap-3.3.5-dist	images
+_config.yml		_nav_menu_items		_site			css			index.html
+_includes		_pages			about.md		feed.xml		js
+_incsub_wikis		_posts			assets			font-awesome-4.3.0	media
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ rm -rf .git
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ git init .
+Initialized empty Git repository in /Users/timfanelli/git/timfanelli-www/.git/
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ git add .
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ git remote add origin git@github.com:TimFanelli/timfanelli-www.git
+Timothys-MacBook-Pro-3:timfanelli-www timfanelli$ git commit -m "Init"
+[master (root-commit) 5bd2db5] Init
+ 1211 files changed, 30388 insertions(+)
+ create mode 100644 .DS_Store
+ create mode 100644 .gitignore
+ create mode 100644 _attachments/2012-04-02-20120402-132206-jpg.html
+ create mode 100644 _attachments/2012-04-02-cropped-house-jpg.html
+ create mode 100644 _attachments/2012-04-02-cropped-img_0110-jpg.html
+ create mode 100644 _attachments/2012-04-18-img_0253.html
+ create mode 100644 _attachments/2012-04-18-img_0254.html
+ create mode 100644 _attachments/2012-04-18-img_0259.html
+ create mode 100644 _attachments/2012-04-22-img_0265.html
+ create mode 100644 _attachments/2012-04-22-img_0266.html
+ create mode 100644 _attachments/2012-04-22-img_0268.html
+ create mode 100644 _attachments/2012-05-15-stock_plug.html
+ create mode 100644 _attachments/2012-05-18-img_0525-2.html
+ create mode 100644 _attachments/2012-05-18-img_0525.html
+ create mode 100644 _attachments/2012-05-18-img_0526-2.html
+ create mode 100644 _attachments/2012-05-18-img_0526.html
+ create mode 100644 _attachments/2012-05-18-img_0527-2.html
+ create mode 100644 _attachments/2012-05-18-img_0527.html
+ create mode 100644 _attachments/2012-05-18-img_0528-2.html
+ create mode 100644 _attachments/2012-05-18-img_0528.html
+ create mode 100644 _attachments/2012-05-18-img_0529-2.html
+ create mode 100644 _attachments/2012-05-18-img_0529.html
+ create mode 100644 _attachments/2012-05-18-img_0530-2.html
+ create mode 100644 _attachments/2012-05-18-img_0530.html
+ create mode 100644 _attachments/2012-05-18-img_0531-2.html
+ create mode 100644 _attachments/2012-05-18-img_0531.html
+ create mode 100644 _attachments/2012-05-18-img_0532-2.html
+ create mode 100644 _attachments/2012-05-18-img_0532.html
+ create mode 100644 _attachments/2012-05-18-img_0533-2.html
+ create mode 100644 _attachments/2012-05-18-img_0533.html
+ create mode 100644 _attachments/2012-05-18-img_0534-2.html
+ create mode 100644 _attachments/2012-05-18-img_0534.html
+ create mode 100644 _attachments/2012-05-18-img_0535-2.html
+ create mode 100644 _attachments/2012-05-18-img_0535.html
+ create mode 100644 _attachments/2012-05-18-img_0536-2.html
+ create mode 100644 _attachments/2012-05-18-img_0536.html
+ create mode 100644 _attachments/2012-05-18-img_0537-2.html
+ create mode 100644 _attachments/2012-05-18-img_0537.html
+ create mode 100644 _attachments/2012-05-18-img_0538-2.html
+ create mode 100644 _attachments/2012-05-18-img_0538.html
+ create mode 100644 _attachments/2012-05-18-img_0539-2.html
+ create mode 100644 _attachments/2012-05-18-img_0539.html
+ create mode 100644 _attachments/2012-05-18-img_0540-2.html
+ create mode 100644 _attachments/2012-05-18-img_0540.html
+ create mode 100644 _attachments/2012-05-18-img_0541-2.html
+ create mode 100644 _attachments/2012-05-18-img_0541.html
+ create mode 100644 _attachments/2012-05-18-img_0542-2.html
+ create mode 100644 _attachments/2012-05-18-img_0542.html
+ create mode 100644 _attachments/2012-05-18-img_0543-2.html
+ create mode 100644 _attachments/2012-05-18-img_0543.html
+ create mode 100644 _attachments/2012-05-18-img_0544-2.html
+ create mode 100644 _attachments/2012-05-18-img_0544.html
+ create mode 100644 _attachments/2012-05-18-img_0545-2.html
+ create mode 100644 _attachments/2012-05-18-img_0545.html
+ create mode 100644 _attachments/2012-05-18-img_0546-2.html
+ create mode 100644 _attachments/2012-05-18-img_0546.html
+ create mode 100644 _attachments/2012-05-27-20120527-171035-jpg.html
+ create mode 100644 _attachments/2012-09-03-ee363-homework-2.html
+ create mode 100644 _attachments/2012-09-03-lecture-2-aug-31-liskov.html
+ create mode 100644 _attachments/2012-09-03-lecture-3-sept-3-liskov-interfaces-junit.html
+ create mode 100644 _attachments/2012-09-12-ee363-design-project-1.html
+ create mode 100644 _config.yml
+ create mode 100644 _includes/about.html
+ create mode 100644 _includes/contact.html
+ create mode 100644 _includes/footer.html
+ create mode 100644 _includes/section-head.html
+ create mode 100644 _includes/site-footer.html
+ create mode 100644 _includes/site-head.html
+ create mode 100644 _includes/site-header.html
+ create mode 100644 _incsub_wikis/2014-02-08-rfid.html
+ create mode 100644 _layouts/page.html
+ create mode 100644 _layouts/post.html
+ create mode 100644 _layouts/site.html
+ create mode 100644 _nav_menu_items/2013-12-01-.html
+ create mode 100644 _nav_menu_items/2013-12-01-310.html
+ create mode 100644 _nav_menu_items/2013-12-01-311.html
+ create mode 100644 _nav_menu_items/2013-12-01-314.html
+ create mode 100644 _nav_menu_items/2013-12-01-315.html
+ create mode 100644 _nav_menu_items/2013-12-01-316.html
+ create mode 100644 _pages/2012-04-02-blog.html
+ create mode 100644 _pages/2012-04-02-family.html
+ create mode 100644 _pages/2012-04-02-sample-page.html
+ create mode 100644 _pages/2012-04-04-bio.html
+ create mode 100644 _pages/2012-04-04-contact.html
+ create mode 100644 _pages/2012-05-31-wishlist-for-the-car.html
+ create mode 100644 _posts/2006-12-03-adding-custom-wpf-controls-to-a-xaml-document.html
+ create mode 100644 _posts/2007-08-08-tether-your-iphone-in-linux.html
+ create mode 100644 _posts/2008-06-24-using-explicit-import-statements-in-java-source-files.html
+ create mode 100644 _posts/2011-03-09-start-developing-jee-solutions-using-websphere.html
+ create mode 100644 _posts/2011-03-10-installing_was_v7.html
+ create mode 100644 _posts/2011-03-11-installing-was-v7-feature-packs.html
+ create mode 100644 _posts/2011-03-12-running-was-as-a-regular-user.html
+ create mode 100644 _posts/2011-03-17-scripted-ear-deployment-for-websphere-application-server.html
+ create mode 100644 _posts/2012-04-02-hello-world.html
+ create mode 100644 _posts/2012-04-02-test-post-from-my-iphone.html
+ create mode 100644 _posts/2012-04-03-first-bike-ride-of-the-year.html
+ create mode 100644 _posts/2012-04-06-potsdam-norwood-norfolk-loop-17-mi.html
+ create mode 100644 _posts/2012-04-08-1000-km-goal-for-the-summer.html
+ create mode 100644 _posts/2012-04-08-norwood-to-hannawa-falls-and-back-36-6-km-23-mi.html
+ create mode 100644 _posts/2012-04-10-first-hotel-gym-workouts.html
+ create mode 100644 _posts/2012-04-15-potsdam-norwood-loop.html
+ create mode 100644 _posts/2012-04-16-norwoodnorfolk-to-hannawa-falls-26-mi.html
+ create mode 100644 _posts/2012-04-18-thule-aero-bar-roof-racks.html
+ create mode 100644 _posts/2012-04-19-quick-potsdam-norwood-loop-before-lunch.html
+ create mode 100644 _posts/2012-04-29-no-sound-on-my-macbook-pro.html
+ create mode 100644 _posts/2012-05-11-2-5-weeks-and-finally-back-on-the-bike.html
+ create mode 100644 _posts/2012-06-05-30-mile-loop.html
+ create mode 100644 _posts/2012-07-18-disable-global-security-in-websphere-application-server.html
+ create mode 100644 _posts/2012-08-24-lecture-1-hello-world-demo.html
+ create mode 100644 _posts/2012-08-27-190.html
+ create mode 100644 _posts/2012-08-27-ee363-homework-1-things-that-change.html
+ create mode 100644 _posts/2012-08-30-text-book-update.html
+ create mode 100644 _posts/2012-09-03-219.html
+ create mode 100644 _posts/2012-09-03-ee363-exam-schedule.html
+ create mode 100644 _posts/2012-09-03-ee363-lectures-2-and-3.html
+ create mode 100644 _posts/2012-09-03-junit-liskov-substitution-demo-from-lecture-3.html
+ create mode 100644 _posts/2012-09-11-bigdecimal-roundingmode-and-currency-values-in-java.html
+ create mode 100644 _posts/2012-09-12-ee363-design-project-1.html
+ create mode 100644 _posts/2012-09-13-ee363-design-project-1-design-notes.html
+ create mode 100644 _posts/2012-09-13-project-1-vs-design-project-1.html
+ create mode 100644 _posts/2012-09-14-java-style-discussion.html
+ create mode 100644 _posts/2012-10-12-ee363-exam-1-uml-diagram.html
+ create mode 100644 _posts/2012-10-12-ee363-exam1-solution.html
+ create mode 100644 _posts/2012-10-22-homework-3.html
+ create mode 100644 _posts/2013-12-01-ridding-myself-of-third-party-hosting.html
+ create mode 100644 _posts/2013-12-06-a-bumpy-but-positive-apple-care-experience-x2.html
+ create mode 100644 _posts/2013-12-10-how-to-marry-your-itunes-libraries.html
+ create mode 100644 _posts/2013-12-14-self-hosted-email-with-os-x-server.html
+ create mode 100644 _sass/_base.scss
+ create mode 100644 _sass/_layout.scss
+ create mode 100644 _sass/_syntax-highlighting.scss
+ create mode 100644 about.md
+ create mode 100644 assets/20120402-132206.jpg
+ create mode 100644 bootstrap-3.3.5-dist/css/bootstrap-theme.css
+ create mode 100644 bootstrap-3.3.5-dist/css/bootstrap-theme.css.map
+ create mode 100644 bootstrap-3.3.5-dist/css/bootstrap-theme.min.css
+ create mode 100644 bootstrap-3.3.5-dist/css/bootstrap.css
+ create mode 100644 bootstrap-3.3.5-dist/css/bootstrap.css.map
+ create mode 100644 bootstrap-3.3.5-dist/css/bootstrap.min.css
+ create mode 100644 bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.eot
+ create mode 100644 bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.svg
+ create mode 100644 bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.ttf
+ create mode 100644 bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.woff
+ create mode 100644 bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.woff2
+ create mode 100644 bootstrap-3.3.5-dist/js/bootstrap.js
+ create mode 100644 bootstrap-3.3.5-dist/js/bootstrap.min.js
+ create mode 100644 bootstrap-3.3.5-dist/js/npm.js
+ create mode 100644 css/contact.css
+ create mode 100644 css/site-ipad.css
+ create mode 100644 css/site.css
+ create mode 100644 feed.xml
+ create mode 100644 font-awesome-4.3.0/.DS_Store
+ create mode 100644 font-awesome-4.3.0/css/font-awesome.css
+ create mode 100644 font-awesome-4.3.0/css/font-awesome.min.css
+ create mode 100644 font-awesome-4.3.0/fonts/FontAwesome.otf
+ create mode 100644 font-awesome-4.3.0/fonts/fontawesome-webfont.eot
+ create mode 100644 font-awesome-4.3.0/fonts/fontawesome-webfont.svg
+ create mode 100644 font-awesome-4.3.0/fonts/fontawesome-webfont.ttf
+ create mode 100644 font-awesome-4.3.0/fonts/fontawesome-webfont.woff
+ create mode 100644 font-awesome-4.3.0/fonts/fontawesome-webfont.woff2
+ create mode 100644 font-awesome-4.3.0/less/animated.less
+ create mode 100644 font-awesome-4.3.0/less/bordered-pulled.less
+ create mode 100644 font-awesome-4.3.0/less/core.less
+ create mode 100644 font-awesome-4.3.0/less/fixed-width.less
+ create mode 100644 font-awesome-4.3.0/less/font-awesome.less
+ create mode 100644 font-awesome-4.3.0/less/icons.less
+ create mode 100644 font-awesome-4.3.0/less/larger.less
+ create mode 100644 font-awesome-4.3.0/less/list.less
+ create mode 100644 font-awesome-4.3.0/less/mixins.less
+ create mode 100644 font-awesome-4.3.0/less/path.less
+ create mode 100644 font-awesome-4.3.0/less/rotated-flipped.less
+ create mode 100644 font-awesome-4.3.0/less/stacked.less
+ create mode 100644 font-awesome-4.3.0/less/variables.less
+ create mode 100644 font-awesome-4.3.0/scss/_animated.scss
+ create mode 100644 font-awesome-4.3.0/scss/_bordered-pulled.scss
+ create mode 100644 font-awesome-4.3.0/scss/_core.scss
+ create mode 100644 font-awesome-4.3.0/scss/_fixed-width.scss
+ create mode 100644 font-awesome-4.3.0/scss/_icons.scss
+ create mode 100644 font-awesome-4.3.0/scss/_larger.scss
+ create mode 100644 font-awesome-4.3.0/scss/_list.scss
+ create mode 100644 font-awesome-4.3.0/scss/_mixins.scss
+ create mode 100644 font-awesome-4.3.0/scss/_path.scss
+ create mode 100644 font-awesome-4.3.0/scss/_rotated-flipped.scss
+ create mode 100644 font-awesome-4.3.0/scss/_stacked.scss
+ create mode 100644 font-awesome-4.3.0/scss/_variables.scss
+ create mode 100644 font-awesome-4.3.0/scss/font-awesome.scss
+ create mode 100644 images/.DS_Store
+ create mode 100644 images/2011mbp_highres/IMG_1030.JPG
+ create mode 100644 images/2011mbp_highres/IMG_1031.jpg
+ create mode 100644 images/2011mbp_highres/IMG_1032.jpeg
+ create mode 100644 images/2011mbp_highres/IMG_1033.JPG
+ create mode 100644 images/2011mbp_highres/IMG_1034.JPG
+ create mode 100644 images/2011mbp_highres/IMG_1035.JPG
+ create mode 100644 images/2011mbp_highres/IMG_1036.JPG
+ create mode 100644 images/2011mbp_highres/IMG_1037.JPG
+ create mode 100644 images/2011mbp_highres/IMG_1038.JPG
+ create mode 100644 images/2011mbp_highres/IMG_1039.jpg
+ create mode 100755 images/BadImports.png
+ create mode 100755 images/BrakeHose.jpg
+ create mode 100644 images/CASE740713716_iPhone6+_VibrateIssue_F2LNG0MXG5QJ.mp4
+ create mode 100755 images/CIMG0048.jpg
+ create mode 100755 images/CIMG0057.jpg
+ create mode 100755 images/Car/.DS_Store
+ create mode 100755 images/Car/CIMG1050.JPG
+ create mode 100755 images/Car/CIMG1051.JPG
+ create mode 100755 images/Car/CIMG1052.JPG
+ create mode 100755 images/Car/CIMG1053.JPG
+ create mode 100755 images/Car/CIMG1054.JPG
+ create mode 100755 images/Car/medium/CIMG1050.jpg
+ create mode 100755 images/Car/medium/CIMG1051.jpg
+ create mode 100755 images/Car/medium/CIMG1052.jpg
+ create mode 100755 images/Car/medium/CIMG1053.jpg
+ create mode 100755 images/Car/medium/CIMG1054.jpg
+ create mode 100644 images/Cert_ITSpec_Infra_App_Mgmt.jpg
+ create mode 100644 images/Cert_ITSpec_Infra_App_Mgmt_sig.jpg
+ create mode 100755 images/ForSale.jpg
+ create mode 100755 images/Huggycycle/.DS_Store
+ create mode 100755 images/Huggycycle/Huggycycle-Images/0.jpg
+ create mode 100755 images/Huggycycle/Huggycycle-Images/1.jpg
+ create mode 100755 images/Huggycycle/Huggycycle-Images/2.jpg
+ create mode 100755 images/Huggycycle/Huggycycle-Images/3.jpg
+ create mode 100755 images/Huggycycle/Huggycycle-Pages/Image0.html
+ create mode 100755 images/Huggycycle/Huggycycle-Pages/Image1.html
+ create mode 100755 images/Huggycycle/Huggycycle-Pages/Image2.html
+ create mode 100755 images/Huggycycle/Huggycycle-Pages/Image3.html
+ create mode 100755 images/Huggycycle/Huggycycle-Thumbnails/0.jpg
+ create mode 100755 images/Huggycycle/Huggycycle-Thumbnails/1.jpg
+ create mode 100755 images/Huggycycle/Huggycycle-Thumbnails/2.jpg
+ create mode 100755 images/Huggycycle/Huggycycle-Thumbnails/3.jpg
+ create mode 100755 images/Huggycycle/Huggycycle.html
+ create mode 100755 images/JackAndSally/hq/img-1.jpg
+ create mode 100755 images/JackAndSally/hq/img-10.jpg
+ create mode 100755 images/JackAndSally/hq/img-11.jpg
+ create mode 100755 images/JackAndSally/hq/img-12.jpg
+ create mode 100755 images/JackAndSally/hq/img-13.jpg
+ create mode 100755 images/JackAndSally/hq/img-14.jpg
+ create mode 100755 images/JackAndSally/hq/img-15.jpg
+ create mode 100755 images/JackAndSally/hq/img-16.jpg
+ create mode 100755 images/JackAndSally/hq/img-17.jpg
+ create mode 100755 images/JackAndSally/hq/img-2.jpg
+ create mode 100755 images/JackAndSally/hq/img-3.jpg
+ create mode 100755 images/JackAndSally/hq/img-4.jpg
+ create mode 100755 images/JackAndSally/hq/img-5.jpg
+ create mode 100755 images/JackAndSally/hq/img-6.jpg
+ create mode 100755 images/JackAndSally/hq/img-7.jpg
+ create mode 100755 images/JackAndSally/hq/img-8.jpg
+ create mode 100755 images/JackAndSally/hq/img-9.jpg
+ create mode 100755 images/JackAndSally/img-1.html
+ create mode 100755 images/JackAndSally/img-10.html
+ create mode 100755 images/JackAndSally/img-11.html
+ create mode 100755 images/JackAndSally/img-12.html
+ create mode 100755 images/JackAndSally/img-13.html
+ create mode 100755 images/JackAndSally/img-14.html
+ create mode 100755 images/JackAndSally/img-15.html
+ create mode 100755 images/JackAndSally/img-16.html
+ create mode 100755 images/JackAndSally/img-17.html
+ create mode 100755 images/JackAndSally/img-2.html
+ create mode 100755 images/JackAndSally/img-3.html
+ create mode 100755 images/JackAndSally/img-4.html
+ create mode 100755 images/JackAndSally/img-5.html
+ create mode 100755 images/JackAndSally/img-6.html
+ create mode 100755 images/JackAndSally/img-7.html
+ create mode 100755 images/JackAndSally/img-8.html
+ create mode 100755 images/JackAndSally/img-9.html
+ create mode 100755 images/JackAndSally/index.html
+ create mode 100755 images/JackAndSally/index1.html
+ create mode 100755 images/JackAndSally/mq/img-1.jpg
+ create mode 100755 images/JackAndSally/mq/img-10.jpg
+ create mode 100755 images/JackAndSally/mq/img-11.jpg
+ create mode 100755 images/JackAndSally/mq/img-12.jpg
+ create mode 100755 images/JackAndSally/mq/img-13.jpg
+ create mode 100755 images/JackAndSally/mq/img-14.jpg
+ create mode 100755 images/JackAndSally/mq/img-15.jpg
+ create mode 100755 images/JackAndSally/mq/img-16.jpg
+ create mode 100755 images/JackAndSally/mq/img-17.jpg
+ create mode 100755 images/JackAndSally/mq/img-2.jpg
+ create mode 100755 images/JackAndSally/mq/img-3.jpg
+ create mode 100755 images/JackAndSally/mq/img-4.jpg
+ create mode 100755 images/JackAndSally/mq/img-5.jpg
+ create mode 100755 images/JackAndSally/mq/img-6.jpg
+ create mode 100755 images/JackAndSally/mq/img-7.jpg
+ create mode 100755 images/JackAndSally/mq/img-8.jpg
+ create mode 100755 images/JackAndSally/mq/img-9.jpg
+ create mode 100755 images/JackAndSally/script/f-spot.js
+ create mode 100755 images/JackAndSally/style/f-spot-simple-white.css
+ create mode 100755 images/JackAndSally/style/f-spot-simple.css
+ create mode 100755 images/JackAndSally/tags.html
+ create mode 100755 images/JackAndSally/thumbs/img-1.jpg
+ create mode 100755 images/JackAndSally/thumbs/img-10.jpg
+ create mode 100755 images/JackAndSally/thumbs/img-11.jpg
+ create mode 100755 images/JackAndSally/thumbs/img-12.jpg
+ create mode 100755 images/JackAndSally/thumbs/img-13.jpg
+ create mode 100755 images/JackAndSally/thumbs/img-14.jpg
+ create mode 100755 images/JackAndSally/thumbs/img-15.jpg
+ create mode 100755 images/JackAndSally/thumbs/img-16.jpg
+ create mode 100755 images/JackAndSally/thumbs/img-17.jpg
+ create mode 100755 images/JackAndSally/thumbs/img-2.jpg
+ create mode 100755 images/JackAndSally/thumbs/img-3.jpg
+ create mode 100755 images/JackAndSally/thumbs/img-4.jpg
+ create mode 100755 images/JackAndSally/thumbs/img-5.jpg
+ create mode 100755 images/JackAndSally/thumbs/img-6.jpg
+ create mode 100755 images/JackAndSally/thumbs/img-7.jpg
+ create mode 100755 images/JackAndSally/thumbs/img-8.jpg
+ create mode 100755 images/JackAndSally/thumbs/img-9.jpg
+ create mode 100644 images/K04Boost-V2vsV3-Normalized2.png
+ create mode 100755 images/KenosiaFairwell/KenosiaFairwell-Images/0.jpg
+ create mode 100755 images/KenosiaFairwell/KenosiaFairwell-Images/1.jpg
+ create mode 100755 images/KenosiaFairwell/KenosiaFairwell-Images/2.jpg
+ create mode 100755 images/KenosiaFairwell/KenosiaFairwell-Images/3.jpg
+ create mode 100755 images/KenosiaFairwell/KenosiaFairwell-Images/4.jpg
+ create mode 100755 images/KenosiaFairwell/KenosiaFairwell-Images/5.jpg
+ create mode 100755 images/KenosiaFairwell/KenosiaFairwell-Pages/Image0.html
+ create mode 100755 images/KenosiaFairwell/KenosiaFairwell-Pages/Image1.html
+ create mode 100755 images/KenosiaFairwell/KenosiaFairwell-Pages/Image2.html
+ create mode 100755 images/KenosiaFairwell/KenosiaFairwell-Pages/Image3.html
+ create mode 100755 images/KenosiaFairwell/KenosiaFairwell-Pages/Image4.html
+ create mode 100755 images/KenosiaFairwell/KenosiaFairwell-Pages/Image5.html
+ create mode 100755 images/KenosiaFairwell/KenosiaFairwell-Thumbnails/0.jpg
+ create mode 100755 images/KenosiaFairwell/KenosiaFairwell-Thumbnails/1.jpg
+ create mode 100755 images/KenosiaFairwell/KenosiaFairwell-Thumbnails/2.jpg
+ create mode 100755 images/KenosiaFairwell/KenosiaFairwell-Thumbnails/3.jpg
+ create mode 100755 images/KenosiaFairwell/KenosiaFairwell-Thumbnails/4.jpg
+ create mode 100755 images/KenosiaFairwell/KenosiaFairwell-Thumbnails/5.jpg
+ create mode 100755 images/KenosiaFairwell/KenosiaFairwell.html
+ create mode 100755 images/Kid-Shirt.jpg
+ create mode 100644 images/Master_ITSpec_App_Int_Mware.jpg
+ create mode 100644 images/Master_ITSpec_App_Int_Mware_sig.jpg
+ create mode 100755 images/NewTattoo.jpg
+ create mode 100755 images/OliveTree.jpg
+ create mode 100755 images/OrganizeImports.png
+ create mode 100755 images/OrganizeImportsPreferences.png
+ create mode 100755 images/OrganizedImports.png
+ create mode 100755 images/SeaFoam Pics/AttachTube.JPG
+ create mode 100755 images/WhyMenDontBatheKids.jpg
+ create mode 100755 images/abstractanonymous.jpg
+ create mode 100755 images/after.jpg
+ create mode 100755 images/alignment.jpg
+ create mode 100644 images/aprbadge/IMG_0585.jpg
+ create mode 100644 images/aprbadge/IMG_0586.jpg
+ create mode 100644 images/aprbadge/IMG_0587.jpg
+ create mode 100644 images/aprbadge/IMG_0588.jpg
+ create mode 100644 images/aprbadge/IMG_0589.jpg
+ create mode 100644 images/aprbadge/IMG_0590.jpg
+ create mode 100644 images/aprbadge/IMG_0591.jpg
+ create mode 100644 images/aprbadge/IMG_0592.jpg
+ create mode 100644 images/aprbadge/IMG_0593.jpg
+ create mode 100644 images/aprbadge/IMG_0594.jpg
+ create mode 100644 images/aprbadge/IMG_0595.jpg
+ create mode 100644 images/aprbadge/IMG_0596.jpg
+ create mode 100644 images/aprbadge/IMG_0597.jpg
+ create mode 100644 images/aprbadge/IMG_0598.jpg
+ create mode 100644 images/aprbadge/IMG_0599.jpg
+ create mode 100644 images/aprbadge/IMG_0600.jpg
+ create mode 100644 images/aprbadge/IMG_0601.jpg
+ create mode 100644 images/aprbadge/IMG_0602.jpg
+ create mode 100644 images/aprbadge/IMG_0603.jpg
+ create mode 100644 images/aprbadge/IMG_0604.jpg
+ create mode 100644 images/aprbadge/IMG_0605.jpg
+ create mode 100644 images/aprbadge/IMG_0606.jpg
+ create mode 100644 images/aprbadge/IMG_0607.jpg
+ create mode 100644 images/aprbadge/IMG_0608.jpg
+ create mode 100644 images/aprbadge/IMG_0609.jpg
+ create mode 100644 images/aprbadge/IMG_0610.jpg
+ create mode 100644 images/aprbadge/IMG_0611.jpg
+ create mode 100644 images/aprbadge/IMG_0612.jpg
+ create mode 100644 images/aprbadge/IMG_0613.jpg
+ create mode 100644 images/aprbadge/IMG_0614.jpg
+ create mode 100644 images/aprbadge/IMG_0615.jpg
+ create mode 100644 images/aprbadge/IMG_0616.jpg
+ create mode 100644 images/aprbadge/IMG_0617.jpg
+ create mode 100644 images/aprbadge/IMG_0618.jpg
+ create mode 100644 images/aprbadge/IMG_0619.jpg
+ create mode 100755 images/apt/CIMG0019.jpg
+ create mode 100755 images/apt/CIMG0020.jpg
+ create mode 100755 images/apt/CIMG0021.JPG
+ create mode 100755 images/apt/CIMG0022.JPG
+ create mode 100755 images/apt/CIMG0023.jpg
+ create mode 100755 images/apt/CIMG0024.jpg
+ create mode 100755 images/apt/CIMG0025.jpg
+ create mode 100755 images/apt/CIMG0026.jpg
+ create mode 100755 images/apt/CIMG0027.jpg
+ create mode 100755 images/apt/CIMG0066.jpg
+ create mode 100755 images/att_research_booboo.jpg
+ create mode 100755 images/babyj.png
+ create mode 100755 images/badScrew.JPG
+ create mode 100755 images/before.jpg
+ create mode 100755 images/biomech/CIMG0857.jpg
+ create mode 100755 images/biomech/CIMG0859.jpg
+ create mode 100755 images/biomech/CIMG0861.jpg
+ create mode 100755 images/biomech/CIMG0862.jpg
+ create mode 100755 images/biomech/CIMG0863.jpg
+ create mode 100755 images/biomech/CIMG0864.jpg
+ create mode 100755 images/biomech/CIMG0865.jpg
+ create mode 100755 images/blosxonomy.bmp
+ create mode 100755 images/blosxonomy.png
+ create mode 100755 images/bottom_left.gif
+ create mode 100755 images/bottom_right.gif
+ create mode 100755 images/brenda.jpg
+ create mode 100755 images/buddies.jpg
+ create mode 100755 images/bunbite.jpg
+ create mode 100755 images/ca/cimg0654.jpg
+ create mode 100755 images/ca/cimg0655.jpg
+ create mode 100755 images/ca/cimg0656.jpg
+ create mode 100755 images/ca/cimg0657.jpg
+ create mode 100755 images/ca/cimg0658.jpg
+ create mode 100755 images/ca/cimg0659.jpg
+ create mode 100755 images/ca/cimg0660.jpg
+ create mode 100755 images/ca/cimg0661.jpg
+ create mode 100755 images/ca/cimg0662.jpg
+ create mode 100755 images/ca/cimg0663.jpg
+ create mode 100755 images/ca/cimg0664 (Modified in GIMP Image Editor).jpg
+ create mode 100755 images/ca/cimg0665.jpg
+ create mode 100755 images/ca/cimg0666.jpg
+ create mode 100755 images/ca/cimg0667 (Modified in GIMP Image Editor).jpg
+ create mode 100755 images/ca/cimg0668 (Modified in GIMP Image Editor).jpg
+ create mode 100755 images/ca/cimg0669.jpg
+ create mode 100755 images/ca/cimg0670.jpg
+ create mode 100755 images/ca/cimg0671.jpg
+ create mode 100755 images/ca/cimg0672.jpg
+ create mode 100755 images/ca/cimg0673.jpg
+ create mode 100755 images/ca/cimg0674.jpg
+ create mode 100755 images/ca/cimg0675.jpg
+ create mode 100755 images/ca/cimg0676.jpg
+ create mode 100755 images/ca/cimg0677.jpg
+ create mode 100755 images/ca/cimg0678.jpg
+ create mode 100755 images/ca/cimg0679.jpg
+ create mode 100755 images/ca/cimg0680.jpg
+ create mode 100755 images/ca/cimg0681.jpg
+ create mode 100755 images/ca/cimg0682.jpg
+ create mode 100755 images/ca/cimg0683.jpg
+ create mode 100755 images/ca/cimg0684.jpg
+ create mode 100755 images/ca/cimg0685.jpg
+ create mode 100755 images/ca/cimg0686.jpg
+ create mode 100755 images/ca/cimg0687.jpg
+ create mode 100755 images/ca/cimg0688.jpg
+ create mode 100755 images/ca/cimg0689.jpg
+ create mode 100755 images/ca/cimg0690.jpg
+ create mode 100755 images/ca/cimg0691.jpg
+ create mode 100755 images/ca/cimg0692.jpg
+ create mode 100755 images/ca/cimg0693.jpg
+ create mode 100755 images/ca/cimg0694.jpg
+ create mode 100755 images/ca/cimg0695.jpg
+ create mode 100755 images/ca/cimg0696.jpg
+ create mode 100755 images/ca/cimg0697.jpg
+ create mode 100755 images/ca/cimg0698.jpg
+ create mode 100755 images/ca/cimg0699 (Modified in GIMP Image Editor).jpg
+ create mode 100755 images/ca/cimg0700.jpg
+ create mode 100755 images/ca/cimg0701.jpg
+ create mode 100755 images/ca/cimg0702.jpg
+ create mode 100755 images/ca/cimg0703.jpg
+ create mode 100755 images/ca/cimg0704 (Modified in GIMP Image Editor).jpg
+ create mode 100755 images/ca/cimg0705.jpg
+ create mode 100755 images/ca/cimg0706 (Modified in GIMP Image Editor).jpg
+ create mode 100755 images/ca/cimg0707.jpg
+ create mode 100755 images/ca/cimg0708.jpg
+ create mode 100755 images/ca/cimg0709.jpg
+ create mode 100755 images/ca/cimg0710.jpg
+ create mode 100755 images/calendar_handicon.png
+ create mode 100755 images/catastrophic_failure.PNG
+ create mode 100755 images/cimg0746.jpg
+ create mode 100755 images/cimg0759.jpg
+ create mode 100755 images/cimg0760.jpg
+ create mode 100755 images/cimg0761.jpg
+ create mode 100755 images/cimg0762.jpg
+ create mode 100755 images/cimg0763.jpg
+ create mode 100755 images/cimg0764.jpg
+ create mode 100755 images/confusedCoverage.png
+ create mode 100755 images/de.icio.us.gif
+ create mode 100755 images/de.icio.us.jpg
+ create mode 100755 images/deadtree.jpg
+ create mode 100755 images/del.icio.us.gif
+ create mode 100644 images/detail/IMG_0010.jpg
+ create mode 100644 images/detail/IMG_0011.jpg
+ create mode 100644 images/detail/IMG_0014.jpg
+ create mode 100644 images/detail/IMG_0016.jpg
+ create mode 100644 images/detail/IMG_0017.jpg
+ create mode 100644 images/detail/IMG_0018.jpg
+ create mode 100644 images/detail/IMG_0019.jpg
+ create mode 100755 images/diningroom/diningroom-Images/0.jpg
+ create mode 100755 images/diningroom/diningroom-Images/1.jpg
+ create mode 100755 images/diningroom/diningroom-Images/2.jpg
+ create mode 100755 images/diningroom/diningroom-Pages/Image0.html
+ create mode 100755 images/diningroom/diningroom-Pages/Image1.html
+ create mode 100755 images/diningroom/diningroom-Pages/Image2.html
+ create mode 100755 images/diningroom/diningroom-Thumbnails/0.jpg
+ create mode 100755 images/diningroom/diningroom-Thumbnails/1.jpg
+ create mode 100755 images/diningroom/diningroom-Thumbnails/2.jpg
+ create mode 100755 images/diningroom/index.html
+ create mode 100644 images/diy_kit.jpg
+ create mode 100644 images/drcolorchip/IMG_0434.jpg
+ create mode 100644 images/drcolorchip/IMG_0436.jpg
+ create mode 100644 images/drcolorchip/IMG_0441.jpg
+ create mode 100644 images/drcolorchip/IMG_0444.jpg
+ create mode 100644 images/drcolorchip/IMG_0445.jpg
+ create mode 100644 images/driving.jpg
+ create mode 100644 images/embed.html
+ create mode 100755 images/fire.jpg
+ create mode 100644 images/flangebolt.jpg
+ create mode 100755 images/fluffy.jpg
+ create mode 100755 images/frontSubFrame.jpg
+ create mode 100755 images/housepics/Page1.html
+ create mode 100755 images/housepics/housepics-Images/0.jpg
+ create mode 100755 images/housepics/housepics-Images/1.jpg
+ create mode 100755 images/housepics/housepics-Images/10.jpg
+ create mode 100755 images/housepics/housepics-Images/11.jpg
+ create mode 100755 images/housepics/housepics-Images/12.jpg
+ create mode 100755 images/housepics/housepics-Images/13.jpg
+ create mode 100755 images/housepics/housepics-Images/14.jpg
+ create mode 100755 images/housepics/housepics-Images/15.jpg
+ create mode 100755 images/housepics/housepics-Images/16.jpg
+ create mode 100755 images/housepics/housepics-Images/17.jpg
+ create mode 100755 images/housepics/housepics-Images/18.jpg
+ create mode 100755 images/housepics/housepics-Images/19.jpg
+ create mode 100755 images/housepics/housepics-Images/2.jpg
+ create mode 100755 images/housepics/housepics-Images/20.jpg
+ create mode 100755 images/housepics/housepics-Images/21.jpg
+ create mode 100755 images/housepics/housepics-Images/22.jpg
+ create mode 100755 images/housepics/housepics-Images/23.jpg
+ create mode 100755 images/housepics/housepics-Images/24.jpg
+ create mode 100755 images/housepics/housepics-Images/25.jpg
+ create mode 100755 images/housepics/housepics-Images/26.jpg
+ create mode 100755 images/housepics/housepics-Images/27.jpg
+ create mode 100755 images/housepics/housepics-Images/28.jpg
+ create mode 100755 images/housepics/housepics-Images/29.jpg
+ create mode 100755 images/housepics/housepics-Images/3.jpg
+ create mode 100755 images/housepics/housepics-Images/30.jpg
+ create mode 100755 images/housepics/housepics-Images/31.jpg
+ create mode 100755 images/housepics/housepics-Images/32.jpg
+ create mode 100755 images/housepics/housepics-Images/33.jpg
+ create mode 100755 images/housepics/housepics-Images/34.jpg
+ create mode 100755 images/housepics/housepics-Images/35.jpg
+ create mode 100755 images/housepics/housepics-Images/36.jpg
+ create mode 100755 images/housepics/housepics-Images/37.jpg
+ create mode 100755 images/housepics/housepics-Images/38.jpg
+ create mode 100755 images/housepics/housepics-Images/39.jpg
+ create mode 100755 images/housepics/housepics-Images/4.jpg
+ create mode 100755 images/housepics/housepics-Images/40.jpg
+ create mode 100755 images/housepics/housepics-Images/41.jpg
+ create mode 100755 images/housepics/housepics-Images/42.jpg
+ create mode 100755 images/housepics/housepics-Images/43.jpg
+ create mode 100755 images/housepics/housepics-Images/44.jpg
+ create mode 100755 images/housepics/housepics-Images/45.jpg
+ create mode 100755 images/housepics/housepics-Images/46.jpg
+ create mode 100755 images/housepics/housepics-Images/5.jpg
+ create mode 100755 images/housepics/housepics-Images/6.jpg
+ create mode 100755 images/housepics/housepics-Images/7.jpg
+ create mode 100755 images/housepics/housepics-Images/8.jpg
+ create mode 100755 images/housepics/housepics-Images/9.jpg
+ create mode 100755 images/housepics/housepics-Pages/Image0.html
+ create mode 100755 images/housepics/housepics-Pages/Image1.html
+ create mode 100755 images/housepics/housepics-Pages/Image10.html
+ create mode 100755 images/housepics/housepics-Pages/Image11.html
+ create mode 100755 images/housepics/housepics-Pages/Image12.html
+ create mode 100755 images/housepics/housepics-Pages/Image13.html
+ create mode 100755 images/housepics/housepics-Pages/Image14.html
+ create mode 100755 images/housepics/housepics-Pages/Image15.html
+ create mode 100755 images/housepics/housepics-Pages/Image16.html
+ create mode 100755 images/housepics/housepics-Pages/Image17.html
+ create mode 100755 images/housepics/housepics-Pages/Image18.html
+ create mode 100755 images/housepics/housepics-Pages/Image19.html
+ create mode 100755 images/housepics/housepics-Pages/Image2.html
+ create mode 100755 images/housepics/housepics-Pages/Image20.html
+ create mode 100755 images/housepics/housepics-Pages/Image21.html
+ create mode 100755 images/housepics/housepics-Pages/Image22.html
+ create mode 100755 images/housepics/housepics-Pages/Image23.html
+ create mode 100755 images/housepics/housepics-Pages/Image24.html
+ create mode 100755 images/housepics/housepics-Pages/Image25.html
+ create mode 100755 images/housepics/housepics-Pages/Image26.html
+ create mode 100755 images/housepics/housepics-Pages/Image27.html
+ create mode 100755 images/housepics/housepics-Pages/Image28.html
+ create mode 100755 images/housepics/housepics-Pages/Image29.html
+ create mode 100755 images/housepics/housepics-Pages/Image3.html
+ create mode 100755 images/housepics/housepics-Pages/Image30.html
+ create mode 100755 images/housepics/housepics-Pages/Image31.html
+ create mode 100755 images/housepics/housepics-Pages/Image32.html
+ create mode 100755 images/housepics/housepics-Pages/Image33.html
+ create mode 100755 images/housepics/housepics-Pages/Image34.html
+ create mode 100755 images/housepics/housepics-Pages/Image35.html
+ create mode 100755 images/housepics/housepics-Pages/Image36.html
+ create mode 100755 images/housepics/housepics-Pages/Image37.html
+ create mode 100755 images/housepics/housepics-Pages/Image38.html
+ create mode 100755 images/housepics/housepics-Pages/Image39.html
+ create mode 100755 images/housepics/housepics-Pages/Image4.html
+ create mode 100755 images/housepics/housepics-Pages/Image40.html
+ create mode 100755 images/housepics/housepics-Pages/Image41.html
+ create mode 100755 images/housepics/housepics-Pages/Image42.html
+ create mode 100755 images/housepics/housepics-Pages/Image43.html
+ create mode 100755 images/housepics/housepics-Pages/Image44.html
+ create mode 100755 images/housepics/housepics-Pages/Image45.html
+ create mode 100755 images/housepics/housepics-Pages/Image46.html
+ create mode 100755 images/housepics/housepics-Pages/Image5.html
+ create mode 100755 images/housepics/housepics-Pages/Image6.html
+ create mode 100755 images/housepics/housepics-Pages/Image7.html
+ create mode 100755 images/housepics/housepics-Pages/Image8.html
+ create mode 100755 images/housepics/housepics-Pages/Image9.html
+ create mode 100755 images/housepics/housepics-Thumbnails/0.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/1.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/10.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/11.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/12.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/13.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/14.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/15.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/16.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/17.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/18.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/19.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/2.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/20.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/21.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/22.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/23.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/24.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/25.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/26.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/27.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/28.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/29.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/3.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/30.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/31.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/32.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/33.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/34.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/35.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/36.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/37.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/38.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/39.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/4.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/40.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/41.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/42.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/43.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/44.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/45.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/46.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/5.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/6.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/7.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/8.jpg
+ create mode 100755 images/housepics/housepics-Thumbnails/9.jpg
+ create mode 100755 images/housepics/index.html
+ create mode 100755 images/iTiE Solutions.png
+ create mode 100755 images/idogrevenge.jpg
+ create mode 100755 images/jackEngine.jpg
+ create mode 100644 images/jettawagon/IMG_0723.jpg
+ create mode 100644 images/jettawagon/IMG_0724.jpg
+ create mode 100644 images/jettawagon/IMG_0725.jpg
+ create mode 100644 images/jettawagon/IMG_0726.jpg
+ create mode 100644 images/jettawagon/IMG_0727.jpg
+ create mode 100644 images/jettawagon/IMG_0728.jpg
+ create mode 100644 images/jettawagon/IMG_0729.jpg
+ create mode 100644 images/jettawagon/IMG_0730.jpg
+ create mode 100644 images/jettawagon/IMG_0731.jpg
+ create mode 100644 images/jettawagon/IMG_0732.jpg
+ create mode 100644 images/jettawagon/IMG_0733.jpg
+ create mode 100644 images/jettawagon/IMG_0734.jpg
+ create mode 100644 images/jettawagon/IMG_0735.jpg
+ create mode 100644 images/jettawagon/IMG_0736.jpg
+ create mode 100644 images/jettawagon/IMG_0737.jpg
+ create mode 100644 images/jettawagon/IMG_0738.jpg
+ create mode 100644 images/jettawagon/IMG_0739.jpg
+ create mode 100644 images/jettawagon/IMG_0740.jpg
+ create mode 100644 images/jettawagon/IMG_0741.jpg
+ create mode 100644 images/jettawagon/IMG_0742.jpg
+ create mode 100644 images/jettawagon/IMG_0743.jpg
+ create mode 100644 images/jettawagon/IMG_0744.jpg
+ create mode 100644 images/jettawagon/IMG_0745.jpg
+ create mode 100644 images/jettawagon/IMG_0746.jpg
+ create mode 100644 images/jettawagon/IMG_0747.jpg
+ create mode 100644 images/jettawagon/IMG_0748.jpg
+ create mode 100644 images/jettawagon/IMG_0749.jpg
+ create mode 100644 images/jettawagon/IMG_0750.jpg
+ create mode 100755 images/josie_avatar.jpg
+ create mode 100644 images/k04v2x-boostn75.png
+ create mode 100644 images/k04v3-boostmaf-withouttcs.png
+ create mode 100644 images/k04v3-boostmaf-withtcs.png
+ create mode 100644 images/k04v3-boostn75.png
+ create mode 100644 images/k04v3-boostvtiming-big.png
+ create mode 100644 images/k04v3-boostvtiming.png
+ create mode 100644 images/k04v3boost-withtcs.png
+ create mode 100644 images/k04v3boot-withouttcs.png
+ create mode 100644 images/k04v3logs/grizza_k04v3_boost.png
+ create mode 100644 images/k04v3logs/grizza_k04v3_boostmaf.png
+ create mode 100644 images/k04v3logs/grizza_k04v3_boostmaf_tcs.png
+ create mode 100644 images/k04v3logs/grizza_k04v3_boosttiming.png
+ create mode 100644 images/k04v3logs/grizza_k04v3_timing.png
+ create mode 100644 images/k04v3logs/k04v2x-boostn75.png
+ create mode 100644 images/k04v3logs/k04v3-boostmaf-withouttcs.png
+ create mode 100644 images/k04v3logs/k04v3-boostmaf-withtcs.png
+ create mode 100644 images/k04v3logs/k04v3-boostn75.png
+ create mode 100644 images/k04v3logs/k04v3-boostvtiming-big.png
+ create mode 100644 images/k04v3logs/k04v3-boostvtiming.png
+ create mode 100644 images/k04v3logs/k04v3boost-withtcs.png
+ create mode 100644 images/k04v3logs/k04v3boot-withouttcs.png
+ create mode 100644 images/k04v3logs/scott-k04v3-boostpedalangle.png
+ create mode 100644 images/k04v3logs/scott_k04v3_boosttiming.png
+ create mode 100644 images/k04v3logs/swagger76_k04v3_boost.png
+ create mode 100644 images/k04v3logs/swagger76_k04v3_boost_notcs_1.png
+ create mode 100644 images/k04v3logs/swagger76_k04v3_boost_notcs_2.png
+ create mode 100644 images/k04v3logs/timneedscoffee10-k04v3-boost-maf-tcsoff.png
+ create mode 100644 images/k04v3logs/timneedscoffee10-k04v3-boost-maf-tcson.png
+ create mode 100644 images/k04v3logs/timneedscoffee10-k04v3-boost-tcscompare.png
+ create mode 100644 images/k04v3logs/timneedscoffee10-k04v3-boost-tcsoff.png
+ create mode 100644 images/k04v3logs/timneedscoffee10-k04v3-boost-tcson.png
+ create mode 100644 images/k04v3logs/timneedscoffee10-k04v3-boost-timing-tcsoff.png
+ create mode 100644 images/k04v3logs/timneedscoffee10-k04v3-boost-timing-tcson.png
+ create mode 100644 images/ledtails/IMG_0720.jpg
+ create mode 100644 images/ledtails/IMG_0721.jpg
+ create mode 100644 images/ledtails/IMG_0722.jpg
+ create mode 100644 images/ledtails/IMG_0723.jpg
+ create mode 100644 images/ledtails/IMG_0724.jpg
+ create mode 100644 images/ledtails/IMG_0725.jpg
+ create mode 100644 images/ledtails/IMG_0726.jpg
+ create mode 100644 images/ledtails/IMG_0727.jpg
+ create mode 100755 images/livingroom.jpg
+ create mode 100755 images/livingroom/CIMG0062.jpg
+ create mode 100755 images/livingroom/CIMG0064.jpg
+ create mode 100755 images/livingroom/CIMG0065.jpg
+ create mode 100755 images/livingroom/CIMG0066.jpg
+ create mode 100755 images/mbp/laptop.png
+ create mode 100755 images/mbpauction/index.html
+ create mode 100755 images/mbpauction/old.html
+ create mode 100755 images/me.jpg
+ create mode 100755 images/me_chillin.jpg
+ create mode 100755 images/me_chillin_thumb.jpg
+ create mode 100755 images/megandstewie.jpg
+ create mode 100755 images/megandstewiesnuggle.jpg
+ create mode 100755 images/menu.png
+ create mode 100755 images/menu1.png
+ create mode 100755 images/mouse_with_helmet.jpg
+ create mode 100755 images/msnsearch.jpg
+ create mode 100755 images/my_mojito.jpg
+ create mode 100755 images/noBrakes.jpg
+ create mode 100755 images/no_idea.jpg
+ create mode 100644 images/oilreport2.png
+ create mode 100755 images/oldRotors.jpg
+ create mode 100755 images/pb_blosxom.gif
+ create mode 100755 images/pb_blosxonomy.gif
+ create mode 100755 images/pb_pyblosxom.gif
+ create mode 100755 images/philmccrackin.jpg
+ create mode 100755 images/php_no_param_bad_error_check.png
+ create mode 100755 images/php_with_parameter.png
+ create mode 100755 images/pingpong/.DS_Store
+ create mode 100755 images/pingpong/pingpong-Images/0.jpg
+ create mode 100755 images/pingpong/pingpong-Images/1.jpg
+ create mode 100755 images/pingpong/pingpong-Images/2.jpg
+ create mode 100755 images/pingpong/pingpong-Images/3.jpg
+ create mode 100755 images/pingpong/pingpong-Images/4.jpg
+ create mode 100755 images/pingpong/pingpong-Images/5.jpg
+ create mode 100755 images/pingpong/pingpong-Pages/Image0.html
+ create mode 100755 images/pingpong/pingpong-Pages/Image1.html
+ create mode 100755 images/pingpong/pingpong-Pages/Image2.html
+ create mode 100755 images/pingpong/pingpong-Pages/Image3.html
+ create mode 100755 images/pingpong/pingpong-Pages/Image4.html
+ create mode 100755 images/pingpong/pingpong-Pages/Image5.html
+ create mode 100755 images/pingpong/pingpong-Thumbnails/0.jpg
+ create mode 100755 images/pingpong/pingpong-Thumbnails/1.jpg
+ create mode 100755 images/pingpong/pingpong-Thumbnails/2.jpg
+ create mode 100755 images/pingpong/pingpong-Thumbnails/3.jpg
+ create mode 100755 images/pingpong/pingpong-Thumbnails/4.jpg
+ create mode 100755 images/pingpong/pingpong-Thumbnails/5.jpg
+ create mode 100755 images/pingpong/pingpong.html
+ create mode 100644 images/pocono-raceway.jpg
+ create mode 100644 images/readiness1.jpg
+ create mode 100644 images/readiness2.jpg
+ create mode 100755 images/rememberkids.jpg
+ create mode 100644 images/res-rawdata-execution.jar
+ create mode 100644 images/retrofit/IMG_0566.jpg
+ create mode 100644 images/retrofit/IMG_0567.jpg
+ create mode 100644 images/retrofit/IMG_0568.jpg
+ create mode 100644 images/retrofit/IMG_0569.jpg
+ create mode 100644 images/retrofit/IMG_0570.jpg
+ create mode 100644 images/retrofit/IMG_0571.jpg
+ create mode 100644 images/retrofit/IMG_0572.jpg
+ create mode 100644 images/retrofit/IMG_0573.jpg
+ create mode 100644 images/retrofit/IMG_0574.jpg
+ create mode 100644 images/retrofit/IMG_0575.jpg
+ create mode 100644 images/retrofit/IMG_0576.jpg
+ create mode 100644 images/retrofit/IMG_0577.jpg
+ create mode 100644 images/retrofit/IMG_0578.jpg
+ create mode 100644 images/retrofit/IMG_0579.jpg
+ create mode 100644 images/retrofit/IMG_0580.jpg
+ create mode 100644 images/retrofit/IMG_0581.jpg
+ create mode 100644 images/retrofit/IMG_0582.jpg
+ create mode 100644 images/retrofit/IMG_0583.jpg
+ create mode 100644 images/retrofit/IMG_0584.jpg
+ create mode 100644 images/retrofit/IMG_0584_small.jpg
+ create mode 100644 images/retrofit/IMG_0620.jpg
+ create mode 100644 images/retrofit/IMG_0621.jpg
+ create mode 100644 images/retrofit/IMG_0622.jpg
+ create mode 100644 images/retrofit/IMG_0623.jpg
+ create mode 100644 images/retrofit/IMG_0624.jpg
+ create mode 100644 images/retrofit/IMG_0625.jpg
+ create mode 100644 images/retrofit/IMG_0626.jpg
+ create mode 100644 images/retrofit/IMG_0627.jpg
+ create mode 100755 images/rich.jpg
+ create mode 100755 images/seafoam/AttachTube.JPG
+ create mode 100755 images/seafoam/DirtyStockEngineBay.JPG
+ create mode 100755 images/seafoam/FPRHighlight.JPG
+ create mode 100755 images/seafoam/RemoveCover.JPG
+ create mode 100755 images/seafoam/RemoveHose.JPG
+ create mode 100755 images/seafoam/TFitting.JPG
+ create mode 100755 images/shavings.jpg
+ create mode 100644 images/shavings_closeup.png
+ create mode 100755 images/smith_corona.jpg
+ create mode 100755 images/stewie.jpg
+ create mode 100755 images/stewie_foot.png
+ create mode 100755 images/stewie_foot_wide.png
+ create mode 100755 images/stewie_recovery.jpg
+ create mode 100755 images/stewiesdead.jpg
+ create mode 100644 images/stock_plug.jpg
+ create mode 100644 images/stock_plug_medium.jpg
+ create mode 100755 images/story_bottom.gif
+ create mode 100755 images/story_top.gif
+ create mode 100755 images/stuckRotorSmall.JPG
+ create mode 100755 images/sunrise.jpg
+ create mode 100755 images/thwarted.jpg
+ create mode 100755 images/timandstewie.jpg
+ create mode 100755 images/timfanelliqrcode.png
+ create mode 100755 images/top_left.gif
+ create mode 100755 images/top_right.gif
+ create mode 100755 images/twitter-rss-bird.png
+ create mode 100755 images/urban-moron.gif
+ create mode 100644 images/wedding.m4v
+ create mode 100644 images/wiring.jpg
+ create mode 100755 images/x-click-but04.gif
+ create mode 100755 images/yoda_boogie.bmp
+ create mode 100755 images/youeatedcookie.jpg
+ create mode 100644 index.html
+ create mode 100644 js/.DS_Store
+ create mode 100644 js/jquery-1.11.3.min.js
+ create mode 100755 js/jquery-validation-1.13.1/additional-methods.js
+ create mode 100755 js/jquery-validation-1.13.1/additional-methods.min.js
+ create mode 100755 js/jquery-validation-1.13.1/jquery.validate.js
+ create mode 100755 js/jquery-validation-1.13.1/jquery.validate.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_ar.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_ar.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_bg.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_bg.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_ca.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_ca.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_cs.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_cs.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_da.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_da.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_de.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_de.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_el.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_el.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_es.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_es.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_es_AR.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_es_AR.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_et.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_et.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_eu.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_eu.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_fa.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_fa.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_fi.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_fi.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_fr.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_fr.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_gl.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_gl.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_he.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_he.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_hr.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_hr.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_hu.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_hu.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_id.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_id.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_is.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_is.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_it.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_it.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_ja.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_ja.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_ka.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_ka.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_kk.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_kk.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_ko.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_ko.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_lt.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_lt.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_lv.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_lv.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_my.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_my.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_nl.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_nl.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_no.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_no.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_pl.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_pl.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_pt_BR.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_pt_BR.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_pt_PT.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_pt_PT.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_ro.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_ro.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_ru.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_ru.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_si.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_si.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_sk.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_sk.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_sl.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_sl.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_sr.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_sr.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_sr_lat.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_sr_lat.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_sv.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_sv.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_th.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_th.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_tj.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_tj.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_tr.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_tr.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_uk.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_uk.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_vi.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_vi.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_zh.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_zh.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_zh_TW.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/messages_zh_TW.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/methods_de.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/methods_de.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/methods_es_CL.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/methods_es_CL.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/methods_fi.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/methods_fi.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/methods_nl.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/methods_nl.min.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/methods_pt.js
+ create mode 100755 js/jquery-validation-1.13.1/localization/methods_pt.min.js
+ create mode 100644 media/.DS_Store
+ create mode 100644 media/2012/04/20120402-132206-150x150.jpg
+ create mode 100644 media/2012/04/20120402-132206-224x300.jpg
+ create mode 100644 media/2012/04/20120402-132206-360x288.jpg
+ create mode 100644 media/2012/04/20120402-132206.jpg
+ create mode 100644 media/2012/04/IMG_0253-1000x288.jpg
+ create mode 100644 media/2012/04/IMG_0253-150x150.jpg
+ create mode 100644 media/2012/04/IMG_0253-225x300.jpg
+ create mode 100644 media/2012/04/IMG_0253-768x1024.jpg
+ create mode 100644 media/2012/04/IMG_0253.jpg
+ create mode 100644 media/2012/04/IMG_0254-1000x288.jpg
+ create mode 100644 media/2012/04/IMG_0254-1024x768.jpg
+ create mode 100644 media/2012/04/IMG_0254-150x150.jpg
+ create mode 100644 media/2012/04/IMG_0254-300x225.jpg
+ create mode 100644 media/2012/04/IMG_0254-400x300.jpg
+ create mode 100644 media/2012/04/IMG_0254.jpg
+ create mode 100644 media/2012/04/IMG_0259-1000x288.jpg
+ create mode 100644 media/2012/04/IMG_0259-1024x768.jpg
+ create mode 100644 media/2012/04/IMG_0259-150x150.jpg
+ create mode 100644 media/2012/04/IMG_0259-300x225.jpg
+ create mode 100644 media/2012/04/IMG_0259-400x300.jpg
+ create mode 100644 media/2012/04/IMG_0259.jpg
+ create mode 100644 media/2012/04/IMG_0265-1000x288.jpg
+ create mode 100644 media/2012/04/IMG_0265-1024x768.jpg
+ create mode 100644 media/2012/04/IMG_0265-150x150.jpg
+ create mode 100644 media/2012/04/IMG_0265-300x225.jpg
+ create mode 100644 media/2012/04/IMG_0265-400x300.jpg
+ create mode 100644 media/2012/04/IMG_0265.jpg
+ create mode 100644 media/2012/04/IMG_0266-1000x288.jpg
+ create mode 100644 media/2012/04/IMG_0266-1024x768.jpg
+ create mode 100644 media/2012/04/IMG_0266-150x150.jpg
+ create mode 100644 media/2012/04/IMG_0266-300x225.jpg
+ create mode 100644 media/2012/04/IMG_0266-400x300.jpg
+ create mode 100644 media/2012/04/IMG_0266.jpg
+ create mode 100644 media/2012/04/IMG_0268-1000x288.jpg
+ create mode 100644 media/2012/04/IMG_0268-1024x768.jpg
+ create mode 100644 media/2012/04/IMG_0268-150x150.jpg
+ create mode 100644 media/2012/04/IMG_0268-300x225.jpg
+ create mode 100644 media/2012/04/IMG_0268-400x300.jpg
+ create mode 100644 media/2012/04/IMG_0268.jpg
+ create mode 100644 media/2012/04/cropped-IMG_0110-150x150.jpg
+ create mode 100644 media/2012/04/cropped-IMG_0110-300x86.jpg
+ create mode 100644 media/2012/04/cropped-IMG_0110-500x144.jpg
+ create mode 100644 media/2012/04/cropped-IMG_0110.jpg
+ create mode 100644 media/2012/04/cropped-house-150x100.jpg
+ create mode 100644 media/2012/04/cropped-house.jpg
+ create mode 100644 media/2012/04/midsize-house.jpg
+ create mode 100644 media/2012/05/20120527-171035-1000x288.jpg
+ create mode 100644 media/2012/05/20120527-171035-150x150.jpg
+ create mode 100644 media/2012/05/20120527-171035-300x225.jpg
+ create mode 100644 media/2012/05/20120527-171035-400x300.jpg
+ create mode 100644 media/2012/05/20120527-171035.jpg
+ create mode 100644 media/2012/05/IMG_0525-1000x288.jpg
+ create mode 100644 media/2012/05/IMG_0525-150x150.jpg
+ create mode 100644 media/2012/05/IMG_0525-225x300.jpg
+ create mode 100644 media/2012/05/IMG_0525-768x1024.jpg
+ create mode 100644 media/2012/05/IMG_0525.jpg
+ create mode 100644 media/2012/05/IMG_05251-150x150.jpg
+ create mode 100644 media/2012/05/IMG_05251-225x300.jpg
+ create mode 100644 media/2012/05/IMG_05251-480x288.jpg
+ create mode 100644 media/2012/05/IMG_05251.jpg
+ create mode 100644 media/2012/05/IMG_0526-1000x288.jpg
+ create mode 100644 media/2012/05/IMG_0526-150x150.jpg
+ create mode 100644 media/2012/05/IMG_0526-225x300.jpg
+ create mode 100644 media/2012/05/IMG_0526-768x1024.jpg
+ create mode 100644 media/2012/05/IMG_0526.jpg
+ create mode 100644 media/2012/05/IMG_05261-150x150.jpg
+ create mode 100644 media/2012/05/IMG_05261-225x300.jpg
+ create mode 100644 media/2012/05/IMG_05261-480x288.jpg
+ create mode 100644 media/2012/05/IMG_05261.jpg
+ create mode 100644 media/2012/05/IMG_0527-1000x288.jpg
+ create mode 100644 media/2012/05/IMG_0527-150x150.jpg
+ create mode 100644 media/2012/05/IMG_0527-225x300.jpg
+ create mode 100644 media/2012/05/IMG_0527-768x1024.jpg
+ create mode 100644 media/2012/05/IMG_0527.jpg
+ create mode 100644 media/2012/05/IMG_05271-150x150.jpg
+ create mode 100644 media/2012/05/IMG_05271-225x300.jpg
+ create mode 100644 media/2012/05/IMG_05271-480x288.jpg
+ create mode 100644 media/2012/05/IMG_05271.jpg
+ create mode 100644 media/2012/05/IMG_0528-1000x288.jpg
+ create mode 100644 media/2012/05/IMG_0528-150x150.jpg
+ create mode 100644 media/2012/05/IMG_0528-225x300.jpg
+ create mode 100644 media/2012/05/IMG_0528-768x1024.jpg
+ create mode 100644 media/2012/05/IMG_0528.jpg
+ create mode 100644 media/2012/05/IMG_05281-150x150.jpg
+ create mode 100644 media/2012/05/IMG_05281-225x300.jpg
+ create mode 100644 media/2012/05/IMG_05281-480x288.jpg
+ create mode 100644 media/2012/05/IMG_05281.jpg
+ create mode 100644 media/2012/05/IMG_0529-1000x288.jpg
+ create mode 100644 media/2012/05/IMG_0529-1024x768.jpg
+ create mode 100644 media/2012/05/IMG_0529-150x150.jpg
+ create mode 100644 media/2012/05/IMG_0529-300x225.jpg
+ create mode 100644 media/2012/05/IMG_0529-400x300.jpg
+ create mode 100644 media/2012/05/IMG_0529.jpg
+ create mode 100644 media/2012/05/IMG_05291-150x150.jpg
+ create mode 100644 media/2012/05/IMG_05291-300x225.jpg
+ create mode 100644 media/2012/05/IMG_05291-400x300.jpg
+ create mode 100644 media/2012/05/IMG_05291-640x288.jpg
+ create mode 100644 media/2012/05/IMG_05291.jpg
+ create mode 100644 media/2012/05/IMG_0530-1000x288.jpg
+ create mode 100644 media/2012/05/IMG_0530-1024x768.jpg
+ create mode 100644 media/2012/05/IMG_0530-150x150.jpg
+ create mode 100644 media/2012/05/IMG_0530-300x225.jpg
+ create mode 100644 media/2012/05/IMG_0530-400x300.jpg
+ create mode 100644 media/2012/05/IMG_0530.jpg
+ create mode 100644 media/2012/05/IMG_05301-150x150.jpg
+ create mode 100644 media/2012/05/IMG_05301-300x225.jpg
+ create mode 100644 media/2012/05/IMG_05301-400x300.jpg
+ create mode 100644 media/2012/05/IMG_05301-640x288.jpg
+ create mode 100644 media/2012/05/IMG_05301.jpg
+ create mode 100644 media/2012/05/IMG_0531-1000x288.jpg
+ create mode 100644 media/2012/05/IMG_0531-1024x768.jpg
+ create mode 100644 media/2012/05/IMG_0531-150x150.jpg
+ create mode 100644 media/2012/05/IMG_0531-300x225.jpg
+ create mode 100644 media/2012/05/IMG_0531-400x300.jpg
+ create mode 100644 media/2012/05/IMG_0531.jpg
+ create mode 100644 media/2012/05/IMG_05311-150x150.jpg
+ create mode 100644 media/2012/05/IMG_05311-300x225.jpg
+ create mode 100644 media/2012/05/IMG_05311-400x300.jpg
+ create mode 100644 media/2012/05/IMG_05311-640x288.jpg
+ create mode 100644 media/2012/05/IMG_05311.jpg
+ create mode 100644 media/2012/05/IMG_0532-1000x288.jpg
+ create mode 100644 media/2012/05/IMG_0532-1024x768.jpg
+ create mode 100644 media/2012/05/IMG_0532-150x150.jpg
+ create mode 100644 media/2012/05/IMG_0532-300x225.jpg
+ create mode 100644 media/2012/05/IMG_0532-400x300.jpg
+ create mode 100644 media/2012/05/IMG_0532.jpg
+ create mode 100644 media/2012/05/IMG_05321-150x150.jpg
+ create mode 100644 media/2012/05/IMG_05321-300x225.jpg
+ create mode 100644 media/2012/05/IMG_05321-400x300.jpg
+ create mode 100644 media/2012/05/IMG_05321-640x288.jpg
+ create mode 100644 media/2012/05/IMG_05321.jpg
+ create mode 100644 media/2012/05/IMG_0533-1000x288.jpg
+ create mode 100644 media/2012/05/IMG_0533-1024x768.jpg
+ create mode 100644 media/2012/05/IMG_0533-150x150.jpg
+ create mode 100644 media/2012/05/IMG_0533-300x225.jpg
+ create mode 100644 media/2012/05/IMG_0533-400x300.jpg
+ create mode 100644 media/2012/05/IMG_0533.jpg
+ create mode 100644 media/2012/05/IMG_05331-150x150.jpg
+ create mode 100644 media/2012/05/IMG_05331-300x225.jpg
+ create mode 100644 media/2012/05/IMG_05331-400x300.jpg
+ create mode 100644 media/2012/05/IMG_05331-640x288.jpg
+ create mode 100644 media/2012/05/IMG_05331.jpg
+ create mode 100644 media/2012/05/IMG_0534-1000x288.jpg
+ create mode 100644 media/2012/05/IMG_0534-1024x768.jpg
+ create mode 100644 media/2012/05/IMG_0534-150x150.jpg
+ create mode 100644 media/2012/05/IMG_0534-300x225.jpg
+ create mode 100644 media/2012/05/IMG_0534-400x300.jpg
+ create mode 100644 media/2012/05/IMG_0534.jpg
+ create mode 100644 media/2012/05/IMG_05341-150x150.jpg
+ create mode 100644 media/2012/05/IMG_05341-300x225.jpg
+ create mode 100644 media/2012/05/IMG_05341-400x300.jpg
+ create mode 100644 media/2012/05/IMG_05341-640x288.jpg
+ create mode 100644 media/2012/05/IMG_05341.jpg
+ create mode 100644 media/2012/05/IMG_0535-150x150.jpg
+ create mode 100644 media/2012/05/IMG_0535-225x300.jpg
+ create mode 100644 media/2012/05/IMG_0535-480x288.jpg
+ create mode 100644 media/2012/05/IMG_0535.jpg
+ create mode 100644 media/2012/05/IMG_05351-150x150.jpg
+ create mode 100644 media/2012/05/IMG_05351-225x300.jpg
+ create mode 100644 media/2012/05/IMG_05351-480x288.jpg
+ create mode 100644 media/2012/05/IMG_05351.jpg
+ create mode 100644 media/2012/05/IMG_0536-150x150.jpg
+ create mode 100644 media/2012/05/IMG_0536-225x300.jpg
+ create mode 100644 media/2012/05/IMG_0536-480x288.jpg
+ create mode 100644 media/2012/05/IMG_0536.jpg
+ create mode 100644 media/2012/05/IMG_05361-150x150.jpg
+ create mode 100644 media/2012/05/IMG_05361-225x300.jpg
+ create mode 100644 media/2012/05/IMG_05361-480x288.jpg
+ create mode 100644 media/2012/05/IMG_05361.jpg
+ create mode 100644 media/2012/05/IMG_0537-150x150.jpg
+ create mode 100644 media/2012/05/IMG_0537-225x300.jpg
+ create mode 100644 media/2012/05/IMG_0537-480x288.jpg
+ create mode 100644 media/2012/05/IMG_0537.jpg
+ create mode 100644 media/2012/05/IMG_05371-150x150.jpg
+ create mode 100644 media/2012/05/IMG_05371-225x300.jpg
+ create mode 100644 media/2012/05/IMG_05371-480x288.jpg
+ create mode 100644 media/2012/05/IMG_05371.jpg
+ create mode 100644 media/2012/05/IMG_0538-150x150.jpg
+ create mode 100644 media/2012/05/IMG_0538-225x300.jpg
+ create mode 100644 media/2012/05/IMG_0538-480x288.jpg
+ create mode 100644 media/2012/05/IMG_0538.jpg
+ create mode 100644 media/2012/05/IMG_05381-150x150.jpg
+ create mode 100644 media/2012/05/IMG_05381-225x300.jpg
+ create mode 100644 media/2012/05/IMG_05381-480x288.jpg
+ create mode 100644 media/2012/05/IMG_05381.jpg
+ create mode 100644 media/2012/05/IMG_0539-1000x288.jpg
+ create mode 100644 media/2012/05/IMG_0539-150x150.jpg
+ create mode 100644 media/2012/05/IMG_0539-225x300.jpg
+ create mode 100644 media/2012/05/IMG_0539-768x1024.jpg
+ create mode 100644 media/2012/05/IMG_0539.jpg
+ create mode 100644 media/2012/05/IMG_05391-150x150.jpg
+ create mode 100644 media/2012/05/IMG_05391-225x300.jpg
+ create mode 100644 media/2012/05/IMG_05391-480x288.jpg
+ create mode 100644 media/2012/05/IMG_05391.jpg
+ create mode 100644 media/2012/05/IMG_0540-1000x288.jpg
+ create mode 100644 media/2012/05/IMG_0540-150x150.jpg
+ create mode 100644 media/2012/05/IMG_0540-225x300.jpg
+ create mode 100644 media/2012/05/IMG_0540-768x1024.jpg
+ create mode 100644 media/2012/05/IMG_0540.jpg
+ create mode 100644 media/2012/05/IMG_05401-150x150.jpg
+ create mode 100644 media/2012/05/IMG_05401-225x300.jpg
+ create mode 100644 media/2012/05/IMG_05401-480x288.jpg
+ create mode 100644 media/2012/05/IMG_05401.jpg
+ create mode 100644 media/2012/05/IMG_0541-1000x288.jpg
+ create mode 100644 media/2012/05/IMG_0541-150x150.jpg
+ create mode 100644 media/2012/05/IMG_0541-225x300.jpg
+ create mode 100644 media/2012/05/IMG_0541-768x1024.jpg
+ create mode 100644 media/2012/05/IMG_0541.jpg
+ create mode 100644 media/2012/05/IMG_05411-150x150.jpg
+ c
